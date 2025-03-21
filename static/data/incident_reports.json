@@ -1,0 +1,103 @@
+{
+  "incidents": [
+    {
+      "id": "INC-2023-001",
+      "title": "Chemical Spill at Processing Plant",
+      "description": "A container of hydrochloric acid was damaged during transport, resulting in a 20-gallon spill in the storage area.",
+      "date": "2023-03-15",
+      "location": "Building 3, Chemical Processing Plant",
+      "severity": 3,
+      "response_time_minutes": 12,
+      "hazard_type": "corrosive_materials",
+      "resolution": "Spill contained with neutralizing agent. Area cordoned off, spill team deployed with appropriate PPE. Neutralized with sodium bicarbonate solution and disposed of according to regulations."
+    },
+    {
+      "id": "INC-2023-002",
+      "title": "Natural Gas Leak",
+      "description": "A gas line was damaged during excavation work, causing a significant natural gas leak.",
+      "date": "2023-04-22",
+      "location": "North Campus Construction Site",
+      "severity": 4,
+      "response_time_minutes": 8,
+      "hazard_type": "flammable_gases",
+      "resolution": "Area evacuated within 200 meters. Gas supply shut off. Leak repaired by utility company. No ignition occurred."
+    },
+    {
+      "id": "INC-2023-003",
+      "title": "Diesel Fuel Spill",
+      "description": "During refueling of backup generator, approximately 5 gallons of diesel fuel spilled onto concrete pad.",
+      "date": "2023-02-10",
+      "location": "Building 7, Power Supply Area",
+      "severity": 2,
+      "response_time_minutes": 15,
+      "hazard_type": "flammable_liquids",
+      "resolution": "Spill contained with absorbent materials. No fuel reached soil or drainage. Contaminated materials properly disposed of."
+    },
+    {
+      "id": "INC-2023-004",
+      "title": "Hydrogen Peroxide Exposure",
+      "description": "Lab technician exposed to 35% hydrogen peroxide solution when container was dropped, causing splash to face and upper body.",
+      "date": "2023-05-03",
+      "location": "Laboratory 4, Research Building",
+      "severity": 3,
+      "response_time_minutes": 5,
+      "hazard_type": "oxidizers",
+      "resolution": "Emergency shower used immediately. Medical assistance provided. Patient treated for chemical burns and released. Spill contained and neutralized."
+    },
+    {
+      "id": "INC-2023-005",
+      "title": "Ammonia Release in Cold Storage",
+      "description": "Refrigeration system failure led to ammonia gas release in food processing cold storage area. Five workers reported respiratory distress.",
+      "date": "2023-06-12",
+      "location": "Cold Storage Facility, Building 12",
+      "severity": 4,
+      "response_time_minutes": 7,
+      "hazard_type": "toxic_gases",
+      "resolution": "Facility evacuated. Emergency ventilation activated. Hazmat team deployed to contain leak. Affected workers received medical treatment. System repaired and tested before return to service."
+    },
+    {
+      "id": "INC-2023-006",
+      "title": "Small Laboratory Fire",
+      "description": "Electrical short in laboratory equipment caused small fire affecting workbench and adjacent materials.",
+      "date": "2023-01-18",
+      "location": "Research Lab 7, Science Building",
+      "severity": 2,
+      "response_time_minutes": 6,
+      "hazard_type": "flammable_materials",
+      "resolution": "Fire extinguished with CO2 extinguisher. Affected equipment isolated from power. No injuries reported. Damage limited to single workstation."
+    },
+    {
+      "id": "INC-2023-007",
+      "title": "Sodium Metal Contact with Water",
+      "description": "Small piece of sodium metal accidentally contacted water during laboratory clean-up, causing rapid reaction and small fire.",
+      "date": "2023-07-24",
+      "location": "Chemistry Lab 3, Education Building",
+      "severity": 3,
+      "response_time_minutes": 4,
+      "hazard_type": "water_reactive_substances",
+      "resolution": "Class D fire extinguisher used to contain reaction. No injuries reported. Laboratory safety protocols reviewed and updated following incident."
+    },
+    {
+      "id": "INC-2023-008",
+      "title": "Oxygen Cylinder Valve Leak",
+      "description": "Valve on medical oxygen cylinder developed leak in hospital storage area, creating oxygen-enriched atmosphere.",
+      "date": "2023-09-05",
+      "location": "Medical Gas Storage, Hospital Wing B",
+      "severity": 3,
+      "response_time_minutes": 10,
+      "hazard_type": "compressed_gases",
+      "resolution": "Area secured. All ignition sources eliminated. Ventilation increased. Faulty valve isolated and cylinder safely removed by certified technician."
+    }
+  ],
+  "industry_standards": {
+    "average_response_times": {
+      "flammable_liquids": 10,
+      "corrosive_materials": 12,
+      "toxic_gases": 7,
+      "flammable_gases": 8,
+      "oxidizers": 10,
+      "compressed_gases": 9,
+      "water_reactive_substances": 6
+    }
+  }
+}

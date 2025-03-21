@@ -1,0 +1,142 @@
+{% extends "layout.html" %}
+
+{% block head %}
+<style>
+    .search-container {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+    
+    .search-header {
+        padding: 2rem 0;
+        margin-bottom: 2rem;
+    }
+    
+    .result-card {
+        margin-bottom: 1rem;
+        transition: transform 0.2s;
+    }
+    
+    .result-card:hover {
+        transform: translateY(-5px);
+    }
+    
+    .source-badge {
+        font-size: 0.8rem;
+    }
+    
+    .loading-spinner {
+        display: none;
+    }
+    
+    .query-examples {
+        margin-top: 2rem;
+    }
+    
+    .example-query {
+        cursor: pointer;
+        transition: background-color 0.2s;
+    }
+    
+    .example-query:hover {
+        background-color: var(--bs-gray-800);
+    }
+    
+    #search-results {
+        padding-top: 1rem;
+    }
+    
+    .protocols-list {
+        list-style-type: none;
+        padding-left: 0;
+    }
+    
+    .protocols-list li {
+        padding: 0.5rem 0;
+        border-bottom: 1px solid var(--bs-gray-700);
+    }
+    
+    .protocols-list li:last-child {
+        border-bottom: none;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="search-container">
+    <div class="search-header text-center">
+        <h1>NLP Safety Information Search</h1>
+        <p class="lead">Ask questions in natural language to retrieve safety protocols, incident reports, and guidance</p>
+    </div>
+    
+    <div class="card">
+        <div class="card-body">
+            <div class="input-group mb-3">
+                <input type="text" id="search-input" class="form-control" placeholder="Ask a safety question..." aria-label="Safety search query">
+                <button class="btn btn-info" type="button" id="search-button">
+                    <i class="fas fa-search me-1"></i> Search
+                </button>
+            </div>
+            <div class="text-center loading-spinner" id="loading-spinner">
+                <div class="spinner-border text-info" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+                <p class="mt-2">Searching safety information...</p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Query Examples -->
+    <div class="query-examples">
+        <h5>Example queries:</h5>
+        <div class="row g-2">
+            <div class="col-md-6">
+                <div class="card example-query" data-query="What are the emergency protocols for a chemical spill?">
+                    <div class="card-body py-2">
+                        <small>"What are the emergency protocols for a chemical spill?"</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card example-query" data-query="How should I respond to a natural gas leak in the facility?">
+                    <div class="card-body py-2">
+                        <small>"How should I respond to a natural gas leak in the facility?"</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card example-query" data-query="What past incidents involved corrosive materials and how were they handled?">
+                    <div class="card-body py-2">
+                        <small>"What past incidents involved corrosive materials and how were they handled?"</small>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card example-query" data-query="What are the required PPE for handling hydrochloric acid?">
+                    <div class="card-body py-2">
+                        <small>"What are the required PPE for handling hydrochloric acid?"</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Search Results -->
+    <div id="search-results" class="mt-4" style="display: none;">
+        <h4 class="mb-3">Search Results</h4>
+        <div class="card mb-4">
+            <div class="card-body">
+                <h5 class="card-title">AI-Generated Answer</h5>
+                <div id="ai-answer" class="border-top pt-3 mt-2"></div>
+            </div>
+        </div>
+        
+        <h5>Source Documents</h5>
+        <div id="result-documents"></div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/search.js') }}"></script>
+{% endblock %}

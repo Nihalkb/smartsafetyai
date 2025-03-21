@@ -1,0 +1,196 @@
+{% extends "layout.html" %}
+
+{% block head %}
+<style>
+    .chat-container {
+        max-width: 800px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        height: calc(100vh - 200px);
+        min-height: 600px;
+    }
+
+    .chat-header {
+        padding: 1rem 0;
+        margin-bottom: 1rem;
+        text-align: center;
+    }
+
+    .chat-messages {
+        flex: 1;
+        overflow-y: auto;
+        padding: 1rem;
+        background-color: var(--bs-gray-900);
+        border-radius: 0.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .message {
+        margin-bottom: 1rem;
+        max-width: 80%;
+    }
+
+    .user-message {
+        margin-left: auto;
+        background-color: var(--bs-info);
+        color: var(--bs-dark);
+        border-radius: 1rem 1rem 0 1rem;
+        padding: 0.75rem 1rem;
+    }
+
+    .system-message {
+        margin-right: auto;
+        background-color: var(--bs-gray-800);
+        border-radius: 1rem 1rem 1rem 0;
+        padding: 0.75rem 1rem;
+        white-space: pre-line;
+    }
+
+    .message-time {
+        font-size: 0.75rem;
+        text-align: right;
+        margin-top: 0.25rem;
+        opacity: 0.8;
+    }
+
+    .chat-input {
+        display: flex;
+        gap: 0.5rem;
+        margin-top: 1rem;
+    }
+
+    .chat-input input {
+        flex: 1;
+        padding: 0.75rem;
+        border-radius: 1.5rem;
+    }
+
+    .chat-input button {
+        border-radius: 1.5rem;
+    }
+
+    .loading-indicator {
+        display: none;
+        margin-right: auto;
+        background-color: var(--bs-gray-800);
+        border-radius: 1rem 1rem 1rem 0;
+        padding: 0.75rem 1rem;
+    }
+
+    .typing-indicator {
+        display: flex;
+    }
+
+    .typing-indicator span {
+        height: 0.5rem;
+        width: 0.5rem;
+        margin: 0 0.1rem;
+        background-color: var(--bs-gray-600);
+        border-radius: 50%;
+        display: inline-block;
+        animation: typing 1.4s infinite ease-in-out both;
+    }
+
+    .typing-indicator span:nth-child(1) {
+        animation-delay: 0s;
+    }
+
+    .typing-indicator span:nth-child(2) {
+        animation-delay: 0.2s;
+    }
+
+    .typing-indicator span:nth-child(3) {
+        animation-delay: 0.4s;
+    }
+
+    @keyframes typing {
+        0% {
+            transform: translateY(0px);
+        }
+        50% {
+            transform: translateY(-5px);
+        }
+        100% {
+            transform: translateY(0px);
+        }
+    }
+
+    .suggestion-chips {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .suggestion-chip {
+        background-color: var(--bs-gray-800);
+        border-radius: 1rem;
+        padding: 0.5rem 1rem;
+        font-size: 0.875rem;
+        cursor: pointer;
+        transition: background-color 0.2s;
+    }
+
+    .suggestion-chip:hover {
+        background-color: var(--bs-gray-700);
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="chat-container">
+    <div class="chat-header">
+        <h1>Safety Information Chat</h1>
+        <p>Ask about safety protocols, incidents, or emergency procedures</p>
+    </div>
+
+    <div class="chat-messages" id="chat-messages">
+        <div class="message system-message">
+            <div class="message-content">
+                Hello! I'm your Safety Information Assistant. I can help you with safety protocols, emergency procedures, and incident information. How can I assist you today?
+            </div>
+            <div class="message-time">Just now</div>
+        </div>
+    </div>
+
+    <div class="loading-indicator" id="loading-indicator">
+        <div class="typing-indicator">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+
+    <div class="suggestion-chips">
+        <div class="suggestion-chip" data-query="What are the emergency protocols for chemical spills?">
+            Emergency protocols for chemical spills
+        </div>
+        <div class="suggestion-chip" data-query="How do I handle a gas leak situation?">
+            How to handle a gas leak
+        </div>
+        <div class="suggestion-chip" data-query="What PPE is required for corrosive materials?">
+            PPE for corrosive materials
+        </div>
+        <div class="suggestion-chip" data-query="What are similar past incidents to a diesel fuel spill?">
+            Find similar incidents to a fuel spill
+        </div>
+    </div>
+
+    <div class="chat-input">
+        <input type="text" id="chat-input" class="form-control" placeholder="Type your safety question here...">
+        <button class="btn btn-info" id="send-button">
+            <i class="fas fa-paper-plane"></i>
+        </button>
+        <button class="btn btn-danger" id="clear-chat-button">
+            <i class="fas fa-trash-alt"></i> Clear Chat
+        </button>
+    </div>
+</div>
+
+<input type="hidden" id="session-id" value="{{ session_id }}">
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/chat.js') }}"></script>
+{% endblock %}

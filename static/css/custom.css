@@ -1,0 +1,113 @@
+/* Custom styling for SafetyAI */
+
+/* Global styles */
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+/* Custom accent colors - using Bootstrap variables for consistency */
+:root {
+    --custom-highlight: var(--bs-info);
+}
+
+/* Card hover effects */
+.hover-card {
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.hover-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+/* Custom badge styles */
+.badge-severity-1 {
+    background-color: #28a745;
+}
+
+.badge-severity-2 {
+    background-color: #a3c739;
+}
+
+.badge-severity-3 {
+    background-color: #ffc107;
+    color: #000;
+}
+
+.badge-severity-4 {
+    background-color: #fd7e14;
+}
+
+.badge-severity-5 {
+    background-color: #dc3545;
+}
+
+/* Preformatted text improvements */
+pre {
+    background-color: var(--bs-gray-900);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    overflow-x: auto;
+}
+
+/* Search result highlighting */
+.highlight {
+    background-color: rgba(23, 162, 184, 0.2);
+    border-radius: 0.2rem;
+    padding: 0.1rem 0.2rem;
+}
+
+/* Section dividers */
+.section-divider {
+    margin: 2rem 0;
+    border-top: 1px solid var(--bs-gray-700);
+}
+
+/* Footer positioning */
+.footer {
+    margin-top: auto;
+}
+
+/* Mobile responsiveness improvements */
+@media (max-width: 768px) {
+    .chat-container {
+        min-height: 400px;
+    }
+    
+    .hero-section {
+        padding: 2rem 0;
+    }
+    
+    .severity-level {
+        font-size: 0.7rem;
+    }
+}
+
+/* Accessibility improvements */
+.btn:focus, 
+.form-control:focus {
+    box-shadow: 0 0 0 0.25rem rgba(23, 162, 184, 0.5);
+}
+
+/* Animated elements */
+@keyframes pulse {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.pulse {
+    animation: pulse 2s infinite;
+}

@@ -1,0 +1,173 @@
+{% extends "layout.html" %}
+
+{% block head %}
+<style>
+    .assessment-container {
+        max-width: 900px;
+        margin: 0 auto;
+    }
+    
+    .assessment-header {
+        padding: 2rem 0;
+        margin-bottom: 2rem;
+    }
+    
+    .severity-scale {
+        display: flex;
+        width: 100%;
+        height: 2rem;
+        margin: 1.5rem 0;
+        border-radius: 0.25rem;
+        overflow: hidden;
+    }
+    
+    .severity-level {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        font-weight: bold;
+        font-size: 0.8rem;
+        text-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
+    }
+    
+    .severity-1 { background-color: #28a745; }
+    .severity-2 { background-color: #a3c739; }
+    .severity-3 { background-color: #ffc107; }
+    .severity-4 { background-color: #fd7e14; }
+    .severity-5 { background-color: #dc3545; }
+    
+    .severity-marker {
+        position: relative;
+        width: 100%;
+        height: 2rem;
+    }
+    
+    .severity-arrow {
+        position: absolute;
+        top: -10px;
+        transform: translateX(-50%);
+        width: 0;
+        height: 0;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-top: 10px solid #fff;
+    }
+    
+    .insights-card {
+        white-space: pre-line;
+    }
+    
+    .historical-data {
+        margin-top: 2rem;
+    }
+    
+    .chart-container {
+        height: 300px;
+        margin-top: 1rem;
+    }
+    
+    .form-group {
+        margin-bottom: 1rem;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="assessment-container">
+    <div class="assessment-header text-center">
+        <h1>Risk Severity Assessment</h1>
+        <p class="lead">Analyze and categorize incidents based on severity and generate predictive insights</p>
+    </div>
+    
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card mb-4">
+                <div class="card-header">
+                    <h5>Incident Risk Assessment</h5>
+                </div>
+                <div class="card-body">
+                    <form id="risk-assessment-form">
+                        <div class="form-group">
+                            <label for="incident-title">Incident Title</label>
+                            <input type="text" class="form-control" id="incident-title" placeholder="Brief title of the incident">
+                        </div>
+                        <div class="form-group">
+                            <label for="incident-details">Incident Details</label>
+                            <textarea class="form-control" id="incident-details" rows="6" placeholder="Provide details about the incident including materials involved, quantities, location, and any injuries or impacts"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-info">
+                            <i class="fas fa-chart-bar me-1"></i> Assess Risk
+                        </button>
+                    </form>
+                    
+                    <div id="loading-assessment" class="text-center mt-3" style="display: none;">
+                        <div class="spinner-border text-info" role="status">
+                            <span class="visually-hidden">Loading...</span>
+                        </div>
+                        <p>Analyzing risk factors...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="col-md-6">
+            <div id="results-container" style="display: none;">
+                <div class="card mb-4">
+                    <div class="card-header">
+                        <h5>Risk Severity Rating</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="severity-scale">
+                            <div class="severity-level severity-1">Minimal</div>
+                            <div class="severity-level severity-2">Low</div>
+                            <div class="severity-level severity-3">Moderate</div>
+                            <div class="severity-level severity-4">High</div>
+                            <div class="severity-level severity-5">Critical</div>
+                        </div>
+                        <div class="severity-marker">
+                            <div class="severity-arrow" id="severity-indicator" style="left: 10%;"></div>
+                        </div>
+                        
+                        <div class="mt-3">
+                            <h6>Severity Score: <span id="severity-score">0</span>/5</h6>
+                            <h6>Classification: <span id="severity-classification">Not assessed</span></h6>
+                        </div>
+                        
+                        <div class="mt-4">
+                            <h6>Assessment Rationale:</h6>
+                            <div id="severity-rationale" class="border p-3 rounded bg-dark"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="card insights-card">
+                    <div class="card-header">
+                        <h5>Predictive Insights</h5>
+                    </div>
+                    <div class="card-body">
+                        <div id="predictive-insights"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="historical-data">
+        <h4 class="mb-3">Historical Risk Data</h4>
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Incident Severity Distribution</h5>
+                <div class="chart-container">
+                    <canvas id="severity-chart"></canvas>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/risk_visualizer.js') }}"></script>
+{% endblock %}

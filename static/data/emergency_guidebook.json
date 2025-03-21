@@ -1,0 +1,76 @@
+{
+  "hazardous_materials": [
+    {
+      "id": "flammable_liquids",
+      "name": "Flammable Liquids",
+      "description": "Liquids that can burn or ignite, such as gasoline, diesel fuel, and many organic chemicals.",
+      "protocols": [
+        "Keep away from heat, hot surfaces, sparks, open flames and other ignition sources.",
+        "Ground and bond container and receiving equipment.",
+        "Use explosion-proof electrical, ventilating, and lighting equipment.",
+        "Wear protective gloves, eye protection, and face protection."
+      ],
+      "emergency_response": "Evacuate area. Eliminate all ignition sources if safe to do so. Use dry chemical, CO2, water spray or alcohol-resistant foam to extinguish fires. Do not use water jet as this can spread fire."
+    },
+    {
+      "id": "corrosive_materials",
+      "name": "Corrosive Materials",
+      "description": "Substances that can attack and chemically destroy exposed body tissues.",
+      "protocols": [
+        "Do not breathe dust, fume, gas, mist, vapors, or spray.",
+        "Wash thoroughly after handling.",
+        "Wear protective gloves, eye protection, and face protection.",
+        "Store locked up in a well-ventilated place. Keep container tightly closed."
+      ],
+      "emergency_response": "Do not get in eyes, on skin, or on clothing. Avoid breathing vapors or dust. Keep container tightly closed. In case of contact, immediately flush with water for at least 15 minutes."
+    },
+    {
+      "id": "toxic_gases",
+      "name": "Toxic Gases",
+      "description": "Gases that can cause death or serious health effects when inhaled or absorbed through the skin.",
+      "protocols": [
+        "Use only outdoors or in a well-ventilated area.",
+        "Wear respiratory protection.",
+        "Keep/Store away from clothing and other combustible materials.",
+        "Protect from sunlight. Store in a well-ventilated place."
+      ],
+      "emergency_response": "Evacuate area immediately. Call emergency services. Move victim to fresh air and keep at rest in a position comfortable for breathing. Administer oxygen if breathing is difficult."
+    },
+    {
+      "id": "oxidizers",
+      "name": "Oxidizers",
+      "description": "Substances that can cause or enhance the combustion of other materials, generally by yielding oxygen.",
+      "protocols": [
+        "Keep/Store away from clothing and other combustible materials.",
+        "Take any precaution to avoid mixing with combustibles.",
+        "Wear protective gloves, eye protection, and face protection.",
+        "Store in a well-ventilated place. Keep container tightly closed."
+      ],
+      "emergency_response": "Evacuate area. In case of major fire and large quantities: Evacuate area. Fight fire remotely due to the risk of explosion. Use water spray, fog or foam."
+    },
+    {
+      "id": "compressed_gases",
+      "name": "Compressed Gases",
+      "description": "Gases stored under pressure in cylinders or tanks.",
+      "protocols": [
+        "Protect from sunlight. Store in a well-ventilated place.",
+        "Do not expose to temperatures exceeding 50°C/122°F.",
+        "Use only outdoors or in a well-ventilated area.",
+        "Do not pierce or burn, even after use."
+      ],
+      "emergency_response": "Evacuate area. Eliminate all ignition sources if safe to do so. Leaking gas fire: Do not extinguish, unless leak can be stopped safely. In case of leakage, eliminate all ignition sources."
+    },
+    {
+      "id": "water_reactive_substances",
+      "name": "Water Reactive Substances",
+      "description": "Substances that react violently or dangerously with water, often producing toxic or flammable gases.",
+      "protocols": [
+        "Handle under inert gas. Protect from moisture.",
+        "Do not allow contact with water.",
+        "Wear protective gloves, eye protection, and face protection.",
+        "Keep container tightly closed. Store in a dry place."
+      ],
+      "emergency_response": "DO NOT USE WATER to extinguish fires or for cleanup. Use dry chemical, soda ash, lime or sand. Evacuate area for large spills. Consult specialists for cleanup."
+    }
+  ]
+}

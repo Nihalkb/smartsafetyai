@@ -1,0 +1,112 @@
+{% extends "layout.html" %}
+
+{% block head %}
+<style>
+    .feature-icon {
+        font-size: 2rem;
+        color: var(--bs-info);
+        margin-bottom: 1rem;
+    }
+    
+    .hero-section {
+        padding: 3rem 0;
+        background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), 
+                  url('https://images.unsplash.com/photo-1581093458791-9d36212ced8a?auto=format&fit=crop&q=80&w=1470&ixlib=rb-4.0.3');
+        background-size: cover;
+        background-position: center;
+        color: white;
+        border-radius: 0.5rem;
+        margin-bottom: 2rem;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<div class="hero-section">
+    <div class="container text-center">
+        <h1 class="display-4">AI-Powered Safety Information System</h1>
+        <p class="lead">Retrieve critical safety information using natural language, analyze incidents, and assess risks with advanced AI capabilities.</p>
+        <div class="mt-4">
+            <a href="/search" class="btn btn-info me-2">Try NLP Search</a>
+            <a href="/chat" class="btn btn-outline-light">Chat with Safety AI</a>
+        </div>
+    </div>
+</div>
+
+<!-- Features Section -->
+<section class="mb-5">
+    <h2 class="text-center mb-4">Key Features</h2>
+    <div class="row g-4">
+        <div class="col-md-4">
+            <div class="card h-100">
+                <div class="card-body text-center">
+                    <div class="feature-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h5 class="card-title">NLP Search</h5>
+                    <p class="card-text">Ask questions in natural language instead of relying on keyword-based searches to find safety protocols and guidance.</p>
+                    <a href="/search" class="btn btn-sm btn-outline-info mt-2">Try It</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card h-100">
+                <div class="card-body text-center">
+                    <div class="feature-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h5 class="card-title">Interactive Chatbot</h5>
+                    <p class="card-text">Get instant AI-powered responses for quick safety information and guidance during emergency situations.</p>
+                    <a href="/chat" class="btn btn-sm btn-outline-info mt-2">Start Chat</a>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card h-100">
+                <div class="card-body text-center">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h5 class="card-title">Risk Assessment</h5>
+                    <p class="card-text">Categorize incidents based on severity and forecast potential risks based on historical data.</p>
+                    <a href="/risk-assessment" class="btn btn-sm btn-outline-info mt-2">Assess Risk</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Secondary Features -->
+<section class="mb-5">
+    <h2 class="text-center mb-4">Advanced Capabilities</h2>
+    <div class="row g-4">
+        <div class="col-md-6">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h5 class="card-title"><i class="fas fa-file-alt text-info me-2"></i>Multi-Document Retrieval</h5>
+                    <p class="card-text">Extract information from multiple sources, including the PHMSA Emergency Guidebook and historical incident reports to provide comprehensive answers.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h5 class="card-title"><i class="fas fa-exchange-alt text-info me-2"></i>Similarity Search & Comparison</h5>
+                    <p class="card-text">Find past incidents similar to new emergencies and compare response times with industry standards to improve safety procedures.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Call to Action -->
+<section class="text-center p-5 bg-dark rounded">
+    <h2>Ready to enhance your safety information system?</h2>
+    <p class="lead">Start exploring our AI-powered safety features</p>
+    <div class="mt-4">
+        <a href="/search" class="btn btn-info me-2">Search Safety Information</a>
+        <a href="/chat" class="btn btn-outline-light">Chat with SafetyAI</a>
+    </div>
+</section>
+{% endblock %}

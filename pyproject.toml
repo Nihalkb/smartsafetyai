@@ -1,0 +1,20 @@
+[project]
+name = "safety_system"
+version = "0.1.0"
+description = "A local safety information system."
+requires-python = ">=3.11"
+dependencies = [
+    "flask>=3.1.0",
+    "flask-sqlalchemy>=3.1.1",
+    "gunicorn>=23.0.0",
+    "psycopg2-binary>=2.9.10",
+    "nltk>=3.9.1",
+    "numpy>=2.2.4",
+    "spacy>=3.8.4",
+    "sqlalchemy>=2.0.39",
+    "openai>=1.66.3",
+    "transformers",
+    "pypdf",
+    "faiss-cpu",
+    "scikit-learn",
+]
