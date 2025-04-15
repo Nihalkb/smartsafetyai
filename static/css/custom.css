@@ -111,3 +111,50 @@ pre {
 .pulse {
     animation: pulse 2s infinite;
 }
+
+
+/* -------- Light Mode Overrides -------- */
+/* -------- Warm Light Mode Overrides -------- */
+body.light-mode {
+    background-color: #f4f1ed;
+    color: #3b3b3b;
+  }
+  
+  body.light-mode .navbar,
+  body.light-mode .footer {
+    background-color: #eae3dc;
+    color: #3b3b3b;
+  }
+  
+  body.light-mode .navbar a,
+  body.light-mode .footer span,
+  body.light-mode .nav-link {
+    color: #3b3b3b !important;
+  }
+  
+  body.light-mode .chat-messages,
+  body.light-mode pre {
+    background-color: #fdfaf7;
+    color: #3b3b3b;
+  }
+  
+  body.light-mode .accordion-item {
+    background-color: #fdfaf7;
+    color: #3b3b3b;
+  }
+  
+  body.light-mode .accordion-button {
+    background-color: #eae3dc;
+    color: #3b3b3b;
+  }
+  
+  body.light-mode .system-message {
+    background-color: #f1ebe4;
+    color: #3b3b3b;
+  }
+  
+  body.light-mode .user-message {
+    background-color: #d1ecf1;
+    color: #0c5460;
+  }
+  

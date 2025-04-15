@@ -17,50 +17,47 @@ class RiskAssessor:
         Assesses risk severity based on past incidents and LLM analysis.
 
         :param incident_description: Description of the incident
-        :return: Severity Level (Low, Medium, High, Critical) and rationale
+        :return: Severity Level (Minimal, Low, Moderate, High, Critical) and rationale
         """
-        # Retrieve similar past incidents
+        # Retrieve similar past incidents from the vector search.
         similar_incidents = self.search_engine.search_documents(incident_description, top_n=3)
-        context = "\n".join([incident[2] for incident in similar_incidents])
+        # Build context from the retrieved chunks using the "text" key.
+        context = "\n".join([incident.get("text", "") for incident in similar_incidents])
 
-        # Construct query for LLM
+        # Construct a query for the LLM.
         llm_prompt = f"""
-        Given the following incident description:
+Given the following incident description:
 
-        {incident_description}
+{incident_description}
 
-        And past similar incidents:
+And past similar incidents:
 
-        {context}
+{context}
 
-        Determine the severity level of this incident based on its potential harm. 
-        Categorize it as: Low, Medium, High, or Critical.
-        Provide a short rationale explaining why you chose this severity.
-        Respond in JSON format with keys 'severity' and 'rationale'.
-        """
+Determine the severity level of this incident based on its potential harm.
+Categorize it as: Minimal, Low, Moderate, High, or Critical.
+Provide a short rationale explaining your classification.
+Respond in JSON format with keys "severity" and "rationale".
+"""
 
-        # Use LLM Handler
         try:
             response = self.llm_handler.generate_response(llm_prompt)
-
-            if not response.strip():  # Check if response is empty
+            if not response.strip():
                 logger.error("LLM returned an empty response.")
                 return self.rule_based_severity(incident_description)
 
-            logger.info(f"LLM Raw Response: {response}")  # Log response for debugging
+            logger.info(f"LLM Raw Response: {response}")
 
-            # Clean response: Remove triple backticks and language labels
+            # Clean response: Remove triple backticks if present.
             cleaned_response = re.sub(r"```json\n(.*?)\n```", r"\1", response, flags=re.DOTALL).strip()
-
             try:
-                result = json.loads(cleaned_response)  # Parse cleaned JSON
+                result = json.loads(cleaned_response)
                 severity = result.get("severity", "Unknown")
                 rationale = result.get("rationale", "No explanation provided.")
                 return severity, rationale
             except json.JSONDecodeError as e:
                 logger.error(f"JSON Parsing Error: {e} | Cleaned Response: {cleaned_response}")
                 return self.rule_based_severity(incident_description)
-
         except Exception as e:
             logger.error(f"LLM Risk Assessment Error: {e}")
             return self.rule_based_severity(incident_description)
@@ -85,12 +82,9 @@ class RiskAssessor:
         # Default severity
         severity = "Low"
         rationale = "No major hazard detected."
-
-        # Check for keywords
         for word, level in keywords.items():
             if word in incident_description.lower():
                 severity = level
                 rationale = f"Keyword '{word}' detected, classified as {level} risk."
-                break  # Stop at first match
-
+                break
         return severity, rationale

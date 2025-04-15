@@ -1,0 +1,611 @@
+Incident Number,Severity,Severity Level,Date,Location,Pipeline Operator,Material Released,PHMSA Guide Reference,Incident Description,Response Actions,Casualties & Injuries
+2,🟡 Minor,Minor,"April 15, 2023","Midland, Texas",XYZ Pipeline Company,Natural Gas (UN 1971),Guide 115,"An unexpected valve failure at a natural gas compressor station caused a rapid pressure buildup, exceeding safe operating limits. The relief valve failed to activate due to blockage in the venting system.","Emergency shutdown initiated per 49 CFR 192.167.
+Automated blowdown system activated to release excess pressure safely.
+Evacuation of non-essential personnel within a 500-meter radius.
+Inspection confirmed pipeline integrity, and pressure relief system was repaired.",No injuries reported.
+3,🟡 Minor,Minor,"September 9, 2022","Bakersfield, California",XYZ Pipeline Company,Crude Oil (UN 1267),Guide 128,"A corrosion-induced failure in a 36-inch crude oil pipeline led to a spill of approximately 15,000 gallons of oil into a nearby dry creek bed.","Pipeline shut down immediately, and isolation valves were closed.
+Spill containment booms deployed to prevent further spread.
+Air and soil monitoring conducted per 49 CFR 195.452 guidelines.
+Root cause analysis identified external corrosion as the primary factor.","No injuries reported, but significant environmental cleanup required."
+4,🔴 Critical,Critical,"February 22, 2021","Houston, Texas",XYZ Pipeline Company,Natural Gas (UN 1971),Guide 115,"A flange gasket failure at a compressor station resulted in a high-pressure gas leak. The station’s gas detection sensors triggered an alarm, leading to an emergency response.","Shutdown procedures executed per 49 CFR 192.167.
+Fire suppression teams on standby due to explosion risk.
+Immediate evacuation and monitoring for atmospheric gas levels.
+Investigation determined gasket failure due to improper maintenance.",No injuries reported.
+5,🟡 Minor,Minor,"July 5, 2023","Baton Rouge, Louisiana",XYZ Pipeline Company,Diesel Fuel (UN 1202),Guide 128,"A mechanical failure in a pump station control valve led to an uncontrolled release of diesel fuel, affecting nearby storm drains.","Immediate shutdown of pumping station and isolation of leak source.
+Spill containment and hazardous material response initiated.
+Environmental cleanup teams deployed per 49 CFR 195.422.
+Inspection revealed worn-out valve components as the root cause.","No injuries, but significant environmental damage."
+6,🟠 Moderate,Moderate,"October 17, 2020","Tulsa, Oklahoma",XYZ Pipeline Company,Natural Gas (UN 1971),Guide 115,"A mechanical failure in the compressor unit led to excessive heat buildup, igniting a small fire. The fire suppression system activated, but high-pressure gas was still venting from the system.","Compressor unit shutdown per 49 CFR 192.735.
+Fire suppression system activated, preventing further escalation.
+Hazardous gas monitoring conducted to prevent secondary ignition.
+Mechanical inspection determined root cause as metal fatigue in turbine blades.","Two employees sustained minor burns, treated on-site."
+7,🟠 Moderate,Moderate,"May 8, 2021","Denver, Colorado",XYZ Pipeline Company,Natural Gas (UN 1971),Guide 115,"A construction crew operating an excavator failed to check for underground gas lines and struck a high-pressure natural gas transmission pipeline, causing an immediate gas release.","Immediate evacuation within a 1.6 km radius per PHMSA Guide 115.
+Pipeline section shut down and gas rerouted.
+Fire department on standby in case of ignition.
+Third-party contractor cited for failure to follow 49 CFR 192.614 excavation notification procedures.","No injuries, but significant gas loss and regulatory fines issued."
+8,🟠 Moderate,Moderate,"August 2, 2019","New Orleans, Louisiana",XYZ Pipeline Company,Diesel Fuel (UN 1202),Guide 128,"An electrical failure in a motor control panel at a pump station caused a fire in the control room, cutting off remote monitoring and shutting down the station.","Local fire department responded and extinguished the fire.
+Emergency shutoff procedures activated to prevent further damage.
+Manual operations resumed per 49 CFR 195.262.
+Post-incident inspection identified faulty wiring as the cause.","No injuries, station back online after 24-hour downtime."
+9,🟡 Minor,Minor,"March 25, 2023","Cheyenne, Wyoming",XYZ Pipeline Company,Crude Oil (UN 1267),Guide 128,"Routine pipeline monitoring detected decreasing pressure, indicating a potential leak. Inspection crews discovered a 10-inch rupture caused by external corrosion.","Pipeline shut down and containment barriers deployed.
+Spill cleanup and environmental assessment conducted.
+Regulators notified per 49 CFR 195.452.
+Pipeline repair included section replacement with corrosion-resistant materials.","No injuries, but significant environmental cleanup required."
+10,🟡 Minor,Minor,"July 10, 2022","Corpus Christi, Texas",XYZ Pipeline Company,Hydrogen Sulfide (UN 1053),Guide 117,"A pressure regulator failure at a gas processing plant led to a release of hydrogen sulfide (H₂S). The leak triggered gas detection alarms, and workers were immediately evacuated.","Emergency response team activated per 49 CFR 192.631.
+H₂S detection confirmed within a 500-meter exclusion zone.
+Evacuation of all non-essential personnel.
+Leak repaired after system depressurization.","Two employees experienced mild H₂S exposure, received medical clearance."
+11,🔴 Critical,Critical,"November 18, 2021","Pittsburgh, Pennsylvania",XYZ Pipeline Company,Natural Gas (UN 1971),Guide 115,"A leak in an underground gas storage facility led to gas accumulation in an adjacent utility trench. A spark from maintenance equipment caused an explosion, damaging nearby buildings.","Immediate shutdown of storage facility and gas rerouted.
+Emergency evacuation of 2-mile radius per PHMSA recommendations.
+Hazardous materials team deployed to assess gas levels.
+Structural damage assessment conducted before reentry.","Three workers sustained moderate burn injuries, hospitalized."
+12,🟡 Minor,Minor,"June 5, 2020","Oklahoma City, Oklahoma",XYZ Pipeline Company,Crude Oil (UN 1267),Guide 128,"A valve malfunction at a pump station resulted in a high-pressure oil release, spilling approximately 12,000 gallons of crude oil into a containment area.","Pump station shut down immediately per 49 CFR 195.262.
+Emergency containment barriers deployed to prevent environmental impact.
+Cleanup crews used vacuum trucks to recover spilled oil.
+Valve failure traced to excessive wear; new monitoring sensors installed.",No injuries reported.
+13,🟡 Minor,Minor,"September 12, 2021","Pittsburgh, Pennsylvania",XYZ Pipeline Company,Natural Gas (UN 1971),Guide 115,A routine inspection identified a small gas leak in a high-pressure transmission pipeline. Further investigation revealed external corrosion as the root cause.,"Pipeline section isolated and depressurized for safety.
+Leak repaired with a composite sleeve per 49 CFR 192.711.
+Cathodic protection system upgraded to prevent future corrosion.
+Regulatory authorities notified per reporting requirements.",No injuries reported.
+14,🔴 Critical,Critical,"April 8, 2023","Cheyenne, Wyoming",XYZ Pipeline Company,Natural Gas (UN 1971),Guide 115,"A mechanical failure in a compressor unit caused an explosion, resulting in significant equipment damage but no fatalities.","Emergency shutdown initiated per 49 CFR 192.167.
+Fire suppression teams activated to control secondary fires.
+Investigation revealed overpressure in the compression unit.
+New overpressure protection measures implemented.","One technician sustained minor burns, treated on-site."
+15,🟡 Minor,Minor,"July 15, 2022","Denver, Colorado",XYZ Pipeline Company,Crude Oil (UN 1267),Guide 128,"A construction crew accidentally struck an underground crude oil pipeline, causing a significant release. The contractor had failed to obtain proper clearance before digging.","Pipeline shut down and isolation valves engaged.
+Oil spill response teams deployed to prevent environmental damage.
+Regulatory investigation conducted; fines issued to the contractor.
+Pipeline repaired and reinforced per 49 CFR 195.422.",No injuries reported.
+16,🟡 Minor,Minor,"January 21, 2021","Baton Rouge, Louisiana",XYZ Pipeline Company,Diesel Fuel (UN 1202),Guide 128,"A weld failure in a storage tank at a pipeline pump station led to the release of 5,000 gallons of diesel fuel into a secondary containment area.","Tank isolated, fuel transfer operations stopped.
+Spilled diesel recovered using vacuum pumps.
+Structural assessment conducted; faulty welds replaced.
+Regulatory agencies notified, and new tank inspection protocols implemented.",No injuries reported.
+17,🟡 Minor,Minor,"November 4, 2020","Corpus Christi, Texas",XYZ Pipeline Company,Natural Gas (UN 1971),Guide 115,A hairline crack in a high-pressure pipeline near a compressor station led to a slow but steady release of natural gas. The leak was detected through routine aerial surveillance.,"Pipeline section shut down per 49 CFR 192.711.
+Crack sealed using composite repair sleeves.
+Pipeline integrity monitoring improved to detect similar failures earlier.
+No environmental contamination reported.",No injuries reported.
+18,🟠 Moderate,Moderate,"May 14, 2022","Houston, Texas",XYZ Pipeline Company,None (Fire Damage),Guide 128,"An electrical panel short circuit at a crude oil pump station resulted in a fire that damaged station control systems. The fire was contained quickly, but operations were halted.","Pump station power supply isolated to prevent further damage.
+Local fire department responded and suppressed the fire.
+Damaged electrical systems replaced per NFPA guidelines.
+New fire suppression system installed.",No injuries reported.
+19,🟡 Minor,Minor,"August 19, 2023","Tulsa, Oklahoma",XYZ Pipeline Company,Natural Gas (UN 1971),Guide 115,A pressure regulation system malfunction resulted in a temporary overpressure condition in a transmission pipeline.,"Emergency shutdown activated per 49 CFR 192.195.
+Relief valves manually operated to vent excess gas safely.
+Pipeline pressure monitoring enhanced to prevent future issues.
+No reported pipeline damage.",No injuries reported.
+20,🟠 Moderate,Moderate,"March 29, 2021","Cheyenne, Wyoming",XYZ Pipeline Company,Natural Gas (UN 1971),Guide 115,"A lightning strike hit an above-ground section of a natural gas pipeline, causing a small localized fire that was quickly extinguished.","Pipeline shutdown and damage assessment conducted.
+Fire suppression teams responded immediately.
+Pipeline segment reinforced with lightning protection measures.
+Incident reviewed for emergency response training.",No injuries reported.
+21,🟡 Minor,Minor,"October 12, 2022","New Orleans, Louisiana",XYZ Pipeline Company,Crude Oil (UN 1267),Guide 128,"Ground subsidence near a wetland area caused stress on a buried pipeline, leading to a small crude oil leak detected by monitoring systems.","Pipeline pressure reduced to mitigate further leaks.
+Leak location excavated and repaired per 49 CFR 195.422.
+Geotechnical surveys conducted to assess future subsidence risks.
+Enhanced monitoring implemented for pipeline movement.",No injuries reported.
+22,🟠 Moderate,Moderate,"April 3, 2021","Tulsa, Oklahoma",XYZ Pipeline Company,Natural Gas (UN 1971),Guide 115,"An overheated bearing in a compressor unit ignited, causing a fire in the facility’s engine room.","Fire suppression system engaged automatically.
+Station evacuated per emergency protocols.
+Fire extinguished before it spread to other units.
+Preventive maintenance increased to avoid overheating issues.","One technician suffered minor smoke inhalation, treated on-site."
+23,🟡 Minor,Minor,"January 6, 2023","Denver, Colorado",XYZ Pipeline Company,Natural Gas (UN 1971),Guide 115,A weld joint failure in a newly installed gas transmission pipeline resulted in pressure loss and gas venting.,"Pipeline segment isolated per 49 CFR 192.711.
+Emergency personnel evacuated a 1-mile radius as a precaution.
+Weld testing procedures revised to prevent future errors.",No injuries reported.
+24,🟡 Minor,Minor,"June 18, 2022**","Midland, Texas",XYZ Pipeline Company,Diesel Fuel (UN 1202),Guide 128,A valve failure in a diesel pipeline pump station resulted in continuous leaking until an operator noticed the issue.,"Pumping operations shut down immediately.
+Secondary containment system prevented environmental contamination.
+Failed valve replaced and all station components inspected.",No injuries reported.
+25,🔴 Critical,Critical,"November 27, 2021","Corpus Christi, Texas",XYZ Pipeline Company,Natural Gas (UN 1971),Guide 115,"A third-party drilling crew struck a gas pipeline, causing a high-pressure leak that later ignited, resulting in an explosion.","Immediate shutdown of the pipeline per 49 CFR 192.614 excavation damage protocols.
+Fire crews responded to suppress flames.
+Regulatory fines issued against the contractor.","Two workers sustained moderate burn injuries, hospitalized."
+26,🟡 Minor,Minor,"September 14, 2020","Oklahoma City, Oklahoma",XYZ Pipeline Company,Anhydrous Ammonia (UN 1005),Guide 125,"A pressure valve malfunction resulted in anhydrous ammonia venting into the air, triggering hazardous material alarms.","Emergency shutdown of pipeline section per 49 CFR 195.134.
+Evacuation ordered for a 1-mile radius.
+Gas dispersion monitoring confirmed safe re-entry after 6 hours.","One responder experienced eye irritation, treated on-site."
+27,🟡 Minor,Minor,"May 21, 2023","New Orleans, Louisiana",XYZ Pipeline Company,Hydrogen Sulfide (UN 1053),Guide 117,"A sudden pressure drop in a processing unit led to an H₂S gas release, prompting an emergency response.","H₂S detection alarms triggered automatic shutdown.
+Facility personnel evacuated.
+Ventilation systems engaged to disperse gas safely.",No injuries reported.
+28,🟡 Minor,Minor,"July 9, 2021","Houston, Texas",XYZ Pipeline Company,Crude Oil (UN 1267),Guide 128,A pump station shutdown due to an internal gear failure caused oil to backflow into the containment system.,"Immediate station shutdown and cleanup.
+Structural assessment identified mechanical fatigue as cause.
+Preventive maintenance program improved.",No injuries reported.
+29,🟡 Minor,Minor,"February 16, 2022","Cheyenne, Wyoming",XYZ Pipeline Company,Crude Oil (UN 1267),Guide 128,"A landslide shifted a buried pipeline, leading to structural failure and a major crude oil release.","Pipeline shutdown and spill containment deployed.
+Geotechnical survey conducted to stabilize future pipeline routes.",No injuries reported.
+30,🟡 Minor,Minor,"March 3, 2023","Pittsburgh, Pennsylvania",XYZ Pipeline Company,Natural Gas (UN 1971),Guide 115,A sudden increase in pressure at a compressor station triggered automatic shutdown protocols to prevent a rupture.,"Overpressure venting system activated.
+Station shutdown until pressure levels stabilized.
+Review of pressure control systems to prevent future occurrences.",No injuries reported.
+31,🟡 Minor,Minor,"August 10, 2021","Midland, Texas",XYZ Pipeline Company,Crude Oil (UN 1267),Guide 128,"A mechanical valve failure at a pump station led to an uncontrolled crude oil leak, spilling 8,000 gallons into the facility’s containment area.","Pump station shut down and leak isolated.
+Spilled oil recovered using vacuum trucks.
+All station valves inspected and replaced where necessary.",No injuries reported.
+32,🟠 Moderate,Moderate,"September 23, 2022","Oklahoma City, Oklahoma",XYZ Pipeline Company,Natural Gas (UN 1971),Guide 115,"A private construction crew conducted excavation work without a proper dig permit, striking a natural gas pipeline and causing a pressure drop and gas release.","Emergency shutdown initiated per 49 CFR 192.614.
+Fire department deployed as a precaution against ignition.
+Excavation company fined for failure to follow pipeline safety regulations.",No injuries reported.
+33,🟡 Minor,Minor,"March 14, 2020","Houston, Texas",XYZ Pipeline Company,Crude Oil (UN 1267),Guide 128,"A pressure sensor malfunction caused a temporary pressure surge in an oil pipeline, exceeding its maximum operating pressure.","Emergency venting system activated per 49 CFR 195.406.
+Pipeline temporarily shut down to relieve excess pressure.
+Sensor calibration procedures updated.",No injuries reported.
+34,⚪ Near Miss / No Impact,,"July 27, 2023","Denver, Colorado",XYZ Pipeline Company,Natural Gas (UN 1971),Guide 115,Routine gas leak detection monitoring identified a small but continuous natural gas leak at a compressor station caused by internal corrosion in the pipeline segment.,"Station shut down to allow safe repair work.
+Pipeline section replaced with corrosion-resistant material.
+Corrosion monitoring schedule increased.",No injuries reported.
+35,🟠 Moderate,Moderate,"May 19, 2022","Baton Rouge, Louisiana",XYZ Pipeline Company,Crude Oil (UN 1267),Guide 128,"A direct lightning strike hit an above-ground crude oil pipeline, igniting residual vapors and causing a localized fire.","Fire suppression teams deployed and contained the fire.
+Pipeline integrity inspection performed before resuming operations.
+Lightning protection system installed at the site.",No injuries reported.
+36,🟡 Minor,Minor,"December 1, 2021","Pittsburgh, Pennsylvania",XYZ Pipeline Company,Diesel Fuel (UN 1202),Guide 128,A hose coupling failure during tanker loading caused 500 gallons of diesel to spill before the flow was shut off.,"Loading operations suspended.
+Spilled diesel absorbed and recovered.
+All loading equipment inspected and damaged hose replaced.",No injuries reported.
+37,🟡 Minor,Minor,"January 10, 2023","Cheyenne, Wyoming",XYZ Pipeline Company,Natural Gas (UN 1971),Guide 115,"A 70-year-old pipeline segment failed due to metal fatigue, resulting in a rupture and gas release.","Emergency shutdown of affected pipeline.
+Aging sections replaced with new high-strength steel pipe.
+Enhanced monitoring of legacy infrastructure implemented.",No injuries reported.
+38,🟡 Minor,Minor,"October 8, 2021","Corpus Christi, Texas",XYZ Pipeline Company,Sulfuric Acid (UN 1830),Guide 137,A valve failure in a sulfuric acid pipeline led to 30 gallons of acid leaking before containment was initiated.,"Hazmat team deployed per PHMSA response protocol.
+Acid neutralized with lime.
+Valve inspection frequency increased.",One worker suffered minor skin irritation.
+39,🟠 Moderate,Moderate,"March 30, 2022","Tulsa, Oklahoma",XYZ Pipeline Company,None (Fire Event),Guide 115,"A compressor turbine failure led to overheating, igniting nearby equipment.","Fire suppression system contained the flames.
+Processing facility shut down for full inspection.
+Preventive maintenance on turbines improved.",No injuries reported.
+40,🟡 Minor,Minor,"September 5, 2023","Houston, Texas",XYZ Pipeline Company,Crude Oil (UN 1267),Guide 128,"Heavy flash floods caused soil erosion, leading to pipeline displacement and a minor oil leak.","Pipeline shut down and affected section stabilized.
+Geotechnical assessment performed.
+Pipeline reburied with flood-resistant measures.",No injuries reported.
+41,🟠 Moderate,Moderate,"June 10, 2022","Baton Rouge, Louisiana",XYZ Pipeline Company,Natural Gas (UN 1971),Guide 115,"A contractor operating a backhoe without proper permits struck a natural gas pipeline, causing a pressurized gas leak.","Pipeline shutdown and emergency response initiated per 49 CFR 192.614.
+Local fire department deployed as a precaution against ignition.
+Excavation company fined for non-compliance.",No injuries reported.
+42,🟡 Minor,Minor,"August 5, 2021","Corpus Christi, Texas",XYZ Pipeline Company,Diesel Fuel (UN 1202),Guide 128,"A crack in a buried diesel pipeline within a storage facility resulted in a slow, undetected leak over several days before discovery.","Pipeline section isolated for inspection and repair.
+Leak detection systems upgraded to improve early warning capabilities.
+Soil remediation conducted to prevent groundwater contamination.",No injuries reported.
+43,🟡 Minor,Minor,"March 18, 2023","Tulsa, Oklahoma",XYZ Pipeline Company,Natural Gas (UN 1971),Guide 115,"A flange gasket failure at a compressor station led to a high-pressure gas leak, triggering alarm systems.","Station shut down and non-essential personnel evacuated.
+Gas detection sensors confirmed leak area and repairs initiated.
+New flange gaskets installed, and all joints inspected.",No injuries reported.
+44,🟡 Minor,Minor,"December 22, 2022","New Orleans, Louisiana",XYZ Pipeline Company,Crude Oil (UN 1267),Guide 128,"Heavy rains caused soil erosion along a pipeline route, exposing and weakening the pipeline, eventually leading to a rupture.","Pipeline shutdown and oil containment barriers deployed.
+Emergency crews recovered 90% of the spilled oil.
+Pipeline reburied with enhanced erosion control measures.",No injuries reported.
+45,🟡 Minor,Minor,"October 1, 2021","Oklahoma City, Oklahoma",XYZ Pipeline Company,Hydrogen Sulfide (UN 1053),Guide 117,A valve malfunction in a gas processing plant led to a minor but hazardous release of hydrogen sulfide (H₂S).,"Facility evacuated and H₂S sensors deployed.
+Gas ventilation fans activated to disperse toxic fumes.
+Valve repaired and additional safety inspections conducted.","One worker suffered minor respiratory distress, treated on-site."
+46,🟠 Moderate,Moderate,"February 8, 2023","Houston, Texas",XYZ Pipeline Company,None (Fire Event),Guide 128,"An electrical short circuit in a control panel caused a fire at a crude oil pump station, disabling operations.","Fire extinguished before spreading to adjacent equipment.
+Facility power isolated and electrical panels replaced.
+Fire-resistant electrical enclosures installed to prevent recurrence.",No injuries reported.
+47,⚪ Near Miss / No Impact,,"July 7, 2022","Denver, Colorado",XYZ Pipeline Company,Liquefied Petroleum Gas (LPG) (UN 1075),Guide 115,"A remote monitoring system detected a pressure drop in an LPG pipeline, indicating a small but continuous leak.","Pipeline section isolated and shut down.
+Leak identified at a pipe weld seam and repaired.
+Remote monitoring system upgraded for faster response.",No injuries reported.
+48,⚪ Near Miss / No Impact,,"November 11, 2021","Pittsburgh, Pennsylvania",XYZ Pipeline Company,Crude Oil (UN 1267),Guide 128,"Severe coastal flooding caused structural damage to an above-ground oil pipeline, leading to a small but ongoing leak.","Pipeline operations halted to contain the leak.
+Pipeline support structures reinforced.
+Long-term flood mitigation plan implemented.",No injuries reported.
+49,🟡 Minor,Minor,"May 25, 2023","Midland, Texas",XYZ Pipeline Company,Natural Gas (UN 1971),Guide 115,A pressure control system failure resulted in an overpressure condition in a transmission pipeline.,"Automated relief valves activated to vent excess gas safely.
+Pipeline operations reviewed and pressure monitoring upgraded.",No injuries reported.
+50,⚪ Near Miss / No Impact,,"January 14, 2022","Cheyenne, Wyoming",XYZ Pipeline Company,Natural Gas (UN 1971),Guide 115,"A small gas leak was detected along a newly installed pipeline segment, traced to a defective weld.","Pipeline shutdown and weld defect repaired.
+All welds in the affected section were re-examined.
+Additional quality control measures implemented for new pipeline installations.",No injuries reported.
+51,🟡 Minor,Minor,"August 9, 2023","Corpus Christi, Texas",XYZ Pipeline Company,Crude Oil (UN 1267),Guide 128,"A routine pipeline integrity assessment detected external corrosion, which led to a minor leak in a 24-inch crude oil pipeline.","Pipeline shutdown and repair initiated per 49 CFR 195.452.
+Cathodic protection system enhanced to prevent further corrosion.
+Excavation and coating application performed.",No injuries reported.
+52,🟡 Minor,Minor,"February 3, 2022","Cheyenne, Wyoming",XYZ Pipeline Company,Natural Gas (UN 1971),Guide 115,"Extreme cold weather led to a valve freeze-up at a compressor station, resulting in an uncontrolled gas release.","Station operations suspended until temperatures stabilized.
+Emergency response teams mitigated hazards and depressurized equipment.
+Winterization measures implemented to prevent recurrence.",No injuries reported.
+53,🟡 Minor,Minor,"July 17, 2021","Midland, Texas",XYZ Pipeline Company,Crude Oil (UN 1267),Guide 128,"A construction company failed to identify underground pipelines before road excavation, puncturing a crude oil pipeline.","Pipeline shut down per 49 CFR 195.422.
+Cleanup crews deployed to contain oil spill.
+Contractor fined for failure to comply with pipeline location laws.",No injuries reported.
+54,🟡 Minor,Minor,"March 25, 2023","Baton Rouge, Louisiana",XYZ Pipeline Company,None (Operational Disruption),Guide 128,"A power surge caused an electrical failure at a crude oil pump station, shutting down operations unexpectedly.","Emergency backup power activated.
+Control system reset to restore operations.
+Surge protection equipment installed to prevent recurrence.",No injuries reported.
+55,🟡 Minor,Minor,"November 6, 2022","Oklahoma City, Oklahoma",XYZ Pipeline Company,Natural Gas (UN 1971),Guide 115,"A faulty weld in a compressor station pipeline developed a small leak, detected by monitoring systems.","Station shutdown and affected section isolated.
+Weld repaired and additional inspections conducted.
+Quality control standards updated for future welding procedures.",No injuries reported.
+56,⚪ Near Miss / No Impact,,"September 14, 2023","Denver, Colorado",XYZ Pipeline Company,Liquefied Petroleum Gas (LPG) (UN 1075),Guide 115,"Shifting soil conditions caused stress on an underground LPG pipeline, leading to a small rupture.","Pipeline shutdown and immediate emergency response.
+Geotechnical assessment conducted for soil stability.
+Pipeline rerouted to a more stable location.",No injuries reported.
+57,🟠 Moderate,Moderate,"May 1, 2023","Pittsburgh, Pennsylvania",XYZ Pipeline Company,None (Fire Event),Guide 128,"Flammable vapors from a leaking seal ignited at a crude oil pump station, causing a fire in the pump area.","Fire suppression systems activated immediately.
+Hazardous vapors monitored to prevent secondary ignition.
+Pump station equipment inspected and damaged seals replaced.",No injuries reported.
+58,🟡 Minor,Minor,"January 9, 2022","New Orleans, Louisiana",XYZ Pipeline Company,Natural Gas (UN 1971),Guide 115,A moderate earthquake (5.2 magnitude) caused a minor gas leak in an underground high-pressure pipeline.,"Pipeline integrity assessment conducted.
+Leak detected and repaired within 12 hours.
+Pipeline retrofitted with seismic-resistant features.",No injuries reported.
+59,🟡 Minor,Minor,"June 20, 2023","Tulsa, Oklahoma",XYZ Pipeline Company,Natural Gas (UN 1971),Guide 115,"A regulator failure caused excessive pressure buildup in a natural gas distribution system, triggering an emergency shutdown.","Automated relief system activated.
+Pressure control system recalibrated to prevent future failures.",No injuries reported.
+60,🟡 Minor,Minor,"April 15, 2022","Cheyenne, Wyoming",XYZ Pipeline Company,Crude Oil (UN 1267),Guide 128,"A rockslide in a mountainous area damaged a buried crude oil pipeline, causing a small leak.","Pipeline operations halted and emergency crews deployed.
+Geotechnical surveys conducted to prevent further incidents.
+Pipeline section repaired and reinforced with additional supports.",No injuries reported.
+61,⚪ Near Miss / No Impact,,"August 30, 2022","Corpus Christi, Texas",XYZ Pipeline Company,Natural Gas (UN 1971),Guide 115,"A flange bolt failure at a compressor station led to a small but continuous gas leak, detected by an on-site technician.","Station shutdown and area evacuated as a precaution.
+Bolts replaced and flange inspected for defects.
+Regular bolt torque inspections added to maintenance protocols.",No injuries reported.
+62,🟠 Moderate,Moderate,"February 10, 2023**","Pittsburgh, Pennsylvania",XYZ Pipeline Company,None (Fire Event),Guide 128,"An electrical failure in a pump station control panel led to an electrical fire, which disrupted crude oil transfer operations.","Fire suppression system activated, preventing further spread.
+Station operations halted until electrical repairs were completed.
+Upgraded electrical components to prevent future failures.",No injuries reported.
+63,🟡 Minor,Minor,"June 8, 2021","Houston, Texas",XYZ Pipeline Company,Diesel Fuel (UN 1202),Guide 128,"A private landowner conducting unauthorized digging struck an underground diesel fuel pipeline, causing a moderate spill.","Pipeline shutdown and spill containment deployed.
+Regulatory authorities notified of excavation violation.
+Landowner fined for failing to follow dig-safe procedures.",No injuries reported.
+64,🟡 Minor,Minor,"October 14, 2021","New Orleans, Louisiana",XYZ Pipeline Company,Natural Gas (UN 1971),Guide 115,"A pressure relief valve malfunction resulted in an overpressure event, leading to a rupture in the transmission pipeline.","Emergency shutdown initiated, isolating the affected section.
+Gas rerouted to alternate pipelines to minimize service disruptions.
+Pressure relief systems upgraded across the network.",No injuries reported.
+65,🟡 Minor,Minor,"July 6, 2023","Tulsa, Oklahoma",XYZ Pipeline Company,Crude Oil (UN 1267),Guide 128,"A coating failure on a buried crude oil pipeline caused undetected corrosion, leading to a slow leak.","Pipeline shutdown and affected section excavated.
+Pipeline recoated with corrosion-resistant material.
+Routine coating integrity inspections increased.",No injuries reported.
+66,🟡 Minor,Minor,"May 18, 2022","Cheyenne, Wyoming",XYZ Pipeline Company,Natural Gas (UN 1971),Guide 115,"Heavy flash flooding washed away soil covering a buried gas pipeline, exposing it to external damage from debris.","Pipeline shut down and integrity inspection conducted.
+Protective structures installed to prevent future flood damage.
+Long-term flood risk assessment initiated.",No injuries reported.
+67,🟡 Minor,Minor,"March 7, 2023","Denver, Colorado",XYZ Pipeline Company,None (Equipment Malfunction),Guide 115,"A compressor unit tripped offline due to an internal bearing failure, triggering an automatic emergency shutdown.","Backup compressors activated to prevent service disruptions.
+Failed unit repaired and bearing system upgraded.
+Condition-based monitoring system installed to detect future failures early.",No injuries reported.
+68,⚪ Near Miss / No Impact,,"September 29, 2021","Midland, Texas",XYZ Pipeline Company,Liquefied Petroleum Gas (LPG) (UN 1075),Guide 115,"A valve packing failure at an LPG metering station resulted in a small, intermittent leak.","Station shutdown and vapor cloud dispersion monitored.
+Valve replaced, and packing integrity assessments increased.",No injuries reported.
+69,⚪ Near Miss / No Impact,,"November 2, 2022","Baton Rouge, Louisiana",XYZ Pipeline Company,Crude Oil (UN 1267),Guide 128,"A pinhole leak developed in an aging crude oil pipeline, releasing a small but continuous amount of oil.","Pipeline shut down for immediate repairs.
+Aging pipeline sections replaced with upgraded materials.
+Pipeline integrity monitoring improved.",No injuries reported.
+70,🟠 Moderate,Moderate,"April 21, 2023","Oklahoma City, Oklahoma",XYZ Pipeline Company,None (Fire Event),Guide 128,"A lightning strike hit a crude oil storage tank, igniting vapors around the tank's vent system.","Fire suppression systems activated, preventing tank damage.
+Tank inspected for structural integrity.
+Lightning protection system enhanced for the facility.",No injuries reported.
+71,🟡 Minor,Minor,"August 15, 2022","Corpus Christi, Texas",XYZ Pipeline Company,Natural Gas (UN 1971),Guide 115,"A seal failure in an underground storage wellhead caused a minor but continuous natural gas leak, detected through gas sensors.","Storage facility operations halted, and leak source identified.
+Seals replaced, and well integrity tested.
+Preventive maintenance frequency increased for all storage wells.",No injuries reported.
+72,🟡 Minor,Minor,"May 10, 2023**","Pittsburgh, Pennsylvania",XYZ Pipeline Company,Crude Oil (UN 1267),Guide 128,"A corrosion-induced failure in a 36-inch crude oil pipeline resulted in a slow leak, detected via pressure monitoring.","Pipeline shut down for immediate repair.
+Corroded section replaced with new steel piping.
+Corrosion inhibitors injected into the pipeline system.",No injuries reported.
+73,🟠 Moderate,Moderate,"October 7, 2021","Houston, Texas",XYZ Pipeline Company,None (Fire Event),Guide 115,"A turbocharger overheated on a gas compressor unit, igniting oil residues near the engine, causing a fire.","Fire suppression systems activated, preventing spread.
+Compressor shutdown until repairs were completed.
+Preventive cooling measures installed to prevent future overheating.",No injuries reported.
+74,🟡 Minor,Minor,"March 28, 2023","New Orleans, Louisiana",XYZ Pipeline Company,Jet Fuel (UN 1863),Guide 128,"A construction contractor failed to obtain proper permits and struck a jet fuel pipeline, causing fuel leakage.","Pipeline shut down and isolation valves closed immediately.
+Cleanup crews deployed to contain and recover spilled fuel.
+Regulatory fines issued against contractor for safety violations.",No injuries reported.
+75,⚪ Near Miss / No Impact,,"July 5, 2021","Tulsa, Oklahoma",XYZ Pipeline Company,Liquefied Petroleum Gas (LPG) (UN 1075),Guide 115,"A faulty pressure relief valve in an LPG storage facility caused a small vapor release, detected by gas monitors.","LPG storage tanks isolated, and faulty valve replaced.
+Emergency ventilation engaged to disperse vapors safely.
+Additional sensor monitoring added for early detection.",No injuries reported.
+76,🔴 Critical,Critical,"December 3, 2022","Cheyenne, Wyoming",XYZ Pipeline Company,Natural Gas (UN 1971),Guide 115,"A gas release from a damaged pipeline section ignited due to a nearby running generator, causing an explosion.","Emergency shutdown initiated immediately.
+Fire department and hazmat teams responded.
+Ignition sources prohibited near active repairs moving forward.","Two workers sustained moderate burns, treated at a local hospital."
+77,🟡 Minor,Minor,"June 19, 2023","Baton Rouge, Louisiana",XYZ Pipeline Company,Crude Oil (UN 1267),Guide 128,A transfer line failure at a pump station led to an oil spill into a secondary containment area.,"Operations halted, and oil recovery initiated.
+Failed transfer line section replaced.
+Routine integrity testing implemented for transfer lines.",No injuries reported.
+78,🟡 Minor,Minor,"September 16, 2021","Midland, Texas",XYZ Pipeline Company,None (Operational Disruption),Guide 115,"A grid power outage caused an unexpected shutdown of a gas compressor station, disrupting gas transmission.","Backup generators deployed to maintain station operations.
+Power reliability assessment conducted to reduce dependency on grid supply.",No injuries reported.
+79,🟡 Minor,Minor,"February 25, 2022","Denver, Colorado",XYZ Pipeline Company,Diesel Fuel (UN 1202),Guide 128,"A previously repaired weld seam developed a small leak, allowing diesel to seep into surrounding soil.","Pipeline shutdown and contaminated soil excavation performed.
+Quality control review of previous repairs conducted.
+Pipeline weld inspection procedures updated.",No injuries reported.
+80,⚪ Near Miss / No Impact,,"November 10, 2023","Oklahoma City, Oklahoma",XYZ Pipeline Company,Liquefied Petroleum Gas (LPG) (UN 1075),Guide 115,"A hose coupling failure during an LPG loading operation caused a small vapor release, triggering gas alarms.","Operations halted and vapor cloud dispersed.
+Hose and coupling system replaced with enhanced fittings.
+Routine hose integrity testing added to loading procedures.",No injuries reported.
+81,🟡 Minor,Minor,"August 12, 2022","Houston, Texas",XYZ Pipeline Company,Natural Gas (UN 1971),Guide 115,"Heavy rains caused soil shifting, which resulted in a pipeline joint separation, leading to a minor gas leak.","Pipeline segment isolated and depressurized.
+Leak sealed and soil stabilization measures implemented.
+Geotechnical monitoring increased in flood-prone areas.",No injuries reported.
+82,🟠 Moderate,Moderate,"March 15, 2023**","Pittsburgh, Pennsylvania",XYZ Pipeline Company,None (Fire Event),Guide 115,"A bearings failure in a gas compressor unit caused excessive friction, igniting leaked lubricating oil.","Fire suppression systems activated, and station evacuated.
+Damaged compressor unit replaced.
+Lubrication system monitoring increased to prevent future failures.",No injuries reported.
+83,🟡 Minor,Minor,"November 18, 2022","Midland, Texas",XYZ Pipeline Company,Diesel Fuel (UN 1202),Guide 128,"A misaligned valve during routine maintenance caused a diesel spill at a pump station, affecting nearby containment areas.","Valve realigned, and station personnel retrained on proper valve operation.
+Spilled diesel recovered, and environmental remediation initiated.
+Pump station automation upgraded to prevent manual misalignment.",No injuries reported.
+84,🟡 Minor,Minor,"July 9, 2021","Denver, Colorado",XYZ Pipeline Company,Natural Gas (UN 1971),Guide 115,"A third-party contractor accidentally struck a pipeline while digging, causing a minor gas leak.","Pipeline isolated and emergency response initiated.
+Excavation contractor fined for non-compliance with dig-safe laws.
+Awareness campaigns launched for contractors working near pipelines.",No injuries reported.
+85,🟡 Minor,Minor,"February 2, 2023","Cheyenne, Wyoming",XYZ Pipeline Company,Liquefied Petroleum Gas (LPG) (UN 1075),Guide 115,"Extreme cold weather caused pipeline embrittlement, leading to a rupture and LPG release.","Pipeline section shut down, and gas dispersion monitored.
+New thermal insulation measures implemented.
+Pipeline metallurgy upgraded for better cold-weather performance.",No injuries reported.
+86,🟡 Minor,Minor,"September 14, 2022","Baton Rouge, Louisiana",XYZ Pipeline Company,Crude Oil (UN 1267),Guide 128,"A gasket failure on a tank farm pipeline connection led to a slow crude oil leak, detected during inspection.","Leaking gasket replaced, and tank farm operations resumed.
+Routine gasket inspections added to maintenance schedules.
+Tank farm infrastructure upgraded with secondary containment measures.",No injuries reported.
+87,🟡 Minor,Minor,"December 5, 2023","Corpus Christi, Texas",XYZ Pipeline Company,Hydrogen Sulfide (UN 1053),Guide 117,"A processing unit valve failure led to an H₂S gas release, triggering emergency alarms.","Facility shut down and employees evacuated.
+Ventilation systems activated to disperse the gas safely.
+Valves replaced, and sensor monitoring improved.","One worker experienced mild respiratory irritation, treated on-site."
+88,🟡 Minor,Minor,"May 22, 2022","Oklahoma City, Oklahoma",XYZ Pipeline Company,Diesel Fuel (UN 1202),Guide 128,"Unauthorized individuals attempted to tap into a diesel pipeline, causing a spill.","Pipeline operators detected abnormal pressure drop and shut down the affected section.
+Law enforcement investigation launched.
+Pipeline surveillance and security measures increased.",No injuries reported.
+89,🟡 Minor,Minor,"August 8, 2021","Tulsa, Oklahoma",XYZ Pipeline Company,Natural Gas (UN 1971),Guide 115,A pressure regulator failure led to excessive pressure buildup in a gas storage facility.,"Emergency venting system activated.
+Pressure relief system upgraded to prevent recurrence.",No injuries reported.
+90,🟠 Moderate,Moderate,"April 3, 2023","New Orleans, Louisiana",XYZ Pipeline Company,None (Fire Event),Guide 115,"A lightning strike hit a gas pipeline vent stack, igniting residual vapors.","Fire suppression system activated immediately.
+Pipeline section inspected for structural integrity.
+Lightning protection system enhanced.",No injuries reported.
+91,🟡 Minor,Minor,"June 10, 2023","Houston, Texas",XYZ Pipeline Company,Natural Gas (UN 1971),Guide 115,"A faulty control valve at a compressor station failed to close properly, leading to a slow but persistent natural gas leak.","Emergency shutdown of the station and valve replaced.
+Gas leak detection systems enhanced.
+Routine valve testing increased to prevent recurrence.",No injuries reported.
+92,⚪ Near Miss / No Impact,,"August 15, 2022","Pittsburgh, Pennsylvania",XYZ Pipeline Company,Diesel Fuel (UN 1202),Guide 128,"A pipeline segment with pre-existing structural fatigue developed a small crack, leading to a diesel fuel leak.","Pipeline section shut down for emergency repairs.
+Damaged section replaced with high-strength steel.
+Structural integrity testing enhanced for aging pipelines.",No injuries reported.
+93,🟡 Minor,Minor,"February 28, 2023","Denver, Colorado",XYZ Pipeline Company,Crude Oil (UN 1267),Guide 128,"A minor earthquake (4.8 magnitude) caused ground shifts, resulting in a stress fracture in an oil pipeline.","Pipeline section isolated, and oil spill contained.
+Seismic monitoring systems integrated into pipeline operations.
+Structural reinforcements added to pipelines in seismic zones.",No injuries reported.
+94,🟡 Minor,Minor,"May 21, 2022","Midland, Texas",XYZ Pipeline Company,Hydrogen Sulfide (UN 1053),Guide 117,"A pipeline transferring sour gas developed a leak near a refinery facility, releasing hydrogen sulfide gas into the atmosphere.","Emergency shutdown and facility evacuation initiated.
+Gas dispersion monitored to ensure safety before re-entry.
+Pipeline corrosion protection measures upgraded.","One worker experienced mild exposure symptoms, treated on-site."
+95,🟡 Minor,Minor,"October 9, 2021","New Orleans, Louisiana",XYZ Pipeline Company,Natural Gas (UN 1971),Guide 115,A malfunction in a gas transmission pipeline regulator station caused a temporary overpressure condition.,"Automated relief system activated.
+Pipeline pressure reduced, and equipment inspected.
+Regulator station controls upgraded for better pressure management.",No injuries reported.
+96,🟡 Minor,Minor,"November 30, 2022","Tulsa, Oklahoma",XYZ Pipeline Company,None (Near Miss),Guide 115,"A construction company failed to notify pipeline operators before digging near a high-pressure gas pipeline, risking potential damage.","Pipeline operators issued immediate stop-work order.
+Regulatory violation reported, and fines imposed on contractor.
+Public safety awareness campaign initiated for excavation near pipelines.",No injuries reported.
+97,🟡 Minor,Minor,"September 14, 2023","Corpus Christi, Texas",XYZ Pipeline Company,Liquefied Petroleum Gas (LPG) (UN 1075),Guide 115,"A pressure relief valve malfunction on an LPG storage tank led to a minor gas release, triggering emergency alarms.","Storage facility evacuated as a precaution.
+Valve replaced, and full facility inspection conducted.
+Automated gas detection system installed for early warnings.",No injuries reported.
+98,🟠 Moderate,Moderate,"July 4, 2022","Baton Rouge, Louisiana",XYZ Pipeline Company,None (Fire Event),Guide 128,A lightning strike on an oil storage tank ignited residual vapors near the tank vent.,"Fire suppression system activated, preventing tank damage.
+Lightning protection system enhanced at the storage facility.",No injuries reported.
+99,🟡 Minor,Minor,"December 22, 2023","Cheyenne, Wyoming",XYZ Pipeline Company,Natural Gas (UN 1971),Guide 115,"An aging pipeline section at a compressor station developed a pinhole leak, detected by routine monitoring.","Pipeline section isolated, and leak repaired.
+Aging infrastructure replacement plan accelerated.
+More frequent integrity testing scheduled for older assets.",No injuries reported.
+100,🟡 Minor,Minor,"February 3, 2023","Oklahoma City, Oklahoma",XYZ Pipeline Company,None (Security Concern),N/A,"Unauthorized individuals were caught attempting to access a secured pipeline right-of-way, raising security concerns.","Local law enforcement notified and security personnel dispatched.
+Pipeline right-of-way monitoring increased with security cameras.
+Public awareness campaign launched on pipeline security risks.",No injuries reported.
+101,⚪ Near Miss / No Impact,,"March 8, 2022","Houston, Texas",XYZ Pipeline Company,Natural Gas (UN 1971),Guide 115,"A routine inline inspection detected internal corrosion in a high-pressure gas transmission pipeline, leading to a small but continuous leak.","Pipeline section isolated, and emergency repair initiated.
+Corroded section replaced with upgraded corrosion-resistant material.
+Pipeline cleaning and corrosion inhibitor injection procedures improved.",No injuries reported.
+102,🟡 Minor,Minor,"June 22, 2023","Midland, Texas",XYZ Pipeline Company,Diesel Fuel (UN 1202),Guide 128,"A malfunctioning control valve at a diesel pump station failed to close, leading to fuel overflow into the secondary containment area.","Pumping operations halted, and excess diesel removed.
+Valve replaced, and all station components inspected.
+Enhanced valve integrity monitoring procedures implemented.",No injuries reported.
+103,🟡 Minor,Minor,"September 17, 2021","Denver, Colorado",XYZ Pipeline Company,Natural Gas (UN 1971),Guide 115,"A pressure regulator failure at a compressor station caused overpressure in a downstream pipeline segment, triggering an emergency shutdown.","Pipeline pressure relief system activated automatically.
+Station equipment recalibrated to prevent further failures.
+Overpressure protection training reinforced for operational teams.",No injuries reported.
+104,🟡 Minor,Minor,"April 28, 2022","Cheyenne, Wyoming",XYZ Pipeline Company,Crude Oil (UN 1267),Guide 128,"A landslide event shifted the soil supporting a buried crude oil pipeline, leading to a stress fracture and oil spill.","Pipeline shutdown and emergency response teams deployed.
+Geotechnical assessments conducted to identify further risks.
+Pipeline rerouted to a more geologically stable location.",No injuries reported.
+105,🟡 Minor,Minor,"August 10, 2023","Pittsburgh, Pennsylvania",XYZ Pipeline Company,Natural Gas (UN 1971),Guide 115,"An aging pipeline segment developed a pinhole leak, detected via routine aerial patrols.","Pipeline operations halted, and damaged section repaired.
+Aging pipeline sections prioritized for replacement.
+Inspection frequency increased for older assets.",No injuries reported.
+106,🟡 Minor,Minor,"November 6, 2022","Baton Rouge, Louisiana",XYZ Pipeline Company,None (Near Miss),Guide 115,"A contractor failed to obtain clearance before excavating near a buried natural gas pipeline, damaging the pipeline coating but not causing a leak.","Pipeline operators halted excavation and assessed potential damage.
+Regulatory fines issued for non-compliance with excavation safety laws.
+Public awareness campaign launched on safe digging near pipelines.",No injuries reported.
+107,🟠 Moderate,Moderate,"March 14, 2023","Corpus Christi, Texas",XYZ Pipeline Company,None (Fire Event),Guide 128,"A faulty circuit breaker at a crude oil pump station caused an electrical short, igniting a small fire in the control panel.","Local fire department responded and extinguished the fire.
+Station power isolated, and faulty components replaced.
+Electrical system inspections increased to identify potential failures.",No injuries reported.
+108,🟡 Minor,Minor,"January 21, 2023**","Oklahoma City, Oklahoma",XYZ Pipeline Company,Liquefied Petroleum Gas (LPG) (UN 1075),Guide 115,"Heavy rains caused soil erosion, which exposed a previously buried LPG pipeline, leading to structural stress and eventual rupture.","Emergency shutdown initiated, and hazardous vapor monitoring conducted.
+Pipeline section repaired, and additional soil reinforcement measures implemented.
+Long-term erosion control projects started in high-risk areas.",No injuries reported.
+109,🟡 Minor,Minor,"July 30, 2021","New Orleans, Louisiana",XYZ Pipeline Company,Crude Oil (UN 1267),Guide 128,"A pressure relief valve failed to reseat properly, allowing a slow crude oil leak from a storage tank connection.","Valve replaced, and storage operations temporarily halted.
+Secondary containment barriers inspected and reinforced.
+Enhanced maintenance procedures implemented for all pressure valves.",No injuries reported.
+110,🟡 Minor,Minor,"October 9, 2023","Tulsa, Oklahoma",XYZ Pipeline Company,None (Security Incident),N/A,"Security personnel identified unauthorized individuals attempting to enter a secured pipeline facility, prompting an emergency response.","Local law enforcement notified, and suspects detained.
+Facility security measures upgraded with surveillance cameras.
+Security awareness training conducted for all employees.",No injuries reported.
+111,🟡 Minor,Minor,"April 11, 2022","Houston, Texas",XYZ Pipeline Company,Natural Gas (UN 1971),Guide 115,"A routine pipeline integrity assessment revealed external corrosion, leading to a minor gas leak in a high-pressure transmission pipeline.","Pipeline shutdown and emergency repair conducted.
+Corrosion-resistant coatings applied to affected pipeline sections.
+Cathodic protection system upgraded to prevent further corrosion.",No injuries reported.
+112,🟡 Minor,Minor,"September 6, 2023","Midland, Texas",XYZ Pipeline Company,Diesel Fuel (UN 1202),Guide 128,"A gasket failure on a fuel transfer pump at a diesel distribution terminal resulted in a spill of 1,200 gallons of diesel fuel.","Spilled diesel recovered and contaminated soil excavated.
+Gaskets inspected and replaced across similar pump systems.
+Routine maintenance protocols enhanced to detect early wear.",No injuries reported.
+113,🟡 Minor,Minor,"March 30, 2021","Denver, Colorado",XYZ Pipeline Company,Natural Gas (UN 1971),Guide 115,"A malfunctioning pressure sensor at a regulator station failed to signal an overpressure condition, leading to a temporary overpressure event in the pipeline system.","Automated relief valves activated to vent excess gas safely.
+Pipeline pressure control systems recalibrated.
+Regular sensor health checks added to pipeline monitoring procedures.",No injuries reported.
+114,⚪ Near Miss / No Impact,,"November 18, 2022","Cheyenne, Wyoming",XYZ Pipeline Company,Crude Oil (UN 1267),Guide 128,"A series of small earthquakes in the region caused ground movement, leading to stress fractures in an underground crude oil pipeline.","Pipeline shutdown and oil spill containment measures deployed.
+Geotechnical assessments performed, and pipeline supports reinforced.
+Seismic-resistant pipeline materials tested for future installations.",No injuries reported.
+115,🟠 Moderate,Moderate,"January 25, 2023","Pittsburgh, Pennsylvania",XYZ Pipeline Company,None (Fire Event),Guide 115,"An electrical short in a compressor control panel ignited a small fire within the facility, leading to a temporary shutdown.","Fire suppression system activated, extinguishing the fire.
+Electrical panel inspected and replaced.
+New fire-resistant enclosures installed for critical electrical components.",No injuries reported.
+116,🟡 Minor,Minor,"August 7, 2021","Baton Rouge, Louisiana",XYZ Pipeline Company,None (Near Miss),Guide 115,"A construction crew began excavation without notifying pipeline operators, risking potential damage to a buried high-pressure gas pipeline.","Pipeline operators halted work and assessed for potential damage.
+Contractor fined for violating excavation safety laws.
+Public outreach efforts increased for safe digging awareness.",No injuries reported.
+117,🟠 Moderate,Moderate,"May 16, 2022","Corpus Christi, Texas",XYZ Pipeline Company,None (Fire Event),Guide 115,"A lightning strike hit a vent stack at a gas processing facility, igniting residual gas vapors and triggering a fire.","Fire suppression systems activated immediately.
+Lightning protection enhanced at the processing facility.
+Vapor recovery system improved to prevent residual gas accumulation.",No injuries reported.
+118,⚪ Near Miss / No Impact,,"October 29, 2022","New Orleans, Louisiana",XYZ Pipeline Company,Diesel Fuel (UN 1202),Guide 128,"A weld repair on a diesel pipeline failed prematurely, leading to a small but continuous fuel leak.","Pipeline section isolated and weld repair redone using improved techniques.
+Quality control for welding procedures enhanced.
+Post-repair pipeline integrity monitoring increased.",No injuries reported.
+119,⚪ Near Miss / No Impact,,"December 14, 2023","Tulsa, Oklahoma",XYZ Pipeline Company,Liquefied Petroleum Gas (LPG) (UN 1075),Guide 115,A leaking valve packing on an LPG metering station resulted in a small but detectable gas release.,"Station shut down, and valve packing replaced.
+Routine valve inspections increased to detect early failures.",No injuries reported.
+120,🟡 Minor,Minor,"February 2, 2024","Oklahoma City, Oklahoma",XYZ Pipeline Company,None (Security Event),N/A,"Security teams detected unauthorized personnel attempting to enter a secured pipeline facility, leading to an investigation.","Local law enforcement notified, and intruders apprehended.
+Surveillance system upgraded with motion detection.
+Security training reinforced for facility personnel.",No injuries reported.
+121,🟡 Minor,Minor,"April 19, 2022","Houston, Texas",XYZ Pipeline Company,Natural Gas (UN 1971),Guide 115,"A compressor station reported a minor gas leak, traced back to worn-out sealing components in one of the units.","Compressor unit shut down, and all seals replaced.
+Leak monitoring frequency increased at the station.
+Maintenance schedule updated for early detection of worn seals.",No injuries reported.
+122,🟡 Minor,Minor,"August 12, 2023","Midland, Texas",XYZ Pipeline Company,Crude Oil (UN 1267),Guide 128,"Heavy rain and soil movement caused stress on a buried pipeline section, resulting in a pinhole leak.","Pipeline shut down, and affected section excavated and repaired.
+Geotechnical stabilization conducted in the area.
+Regular inspections implemented for soil stability monitoring.",No injuries reported.
+123,🟡 Minor,Minor,"May 7, 2022","Denver, Colorado",XYZ Pipeline Company,Liquefied Petroleum Gas (LPG) (UN 1075),Guide 115,"An operator misaligned a valve during a transfer operation, causing an unintentional LPG release.","Transfer operations stopped immediately.
+Valve alignment procedures reinforced through staff training.
+Automated valve monitoring installed to prevent misalignments.",No injuries reported.
+124,🟡 Minor,Minor,"September 15, 2021","Cheyenne, Wyoming",XYZ Pipeline Company,Natural Gas (UN 1971),Guide 115,A pressure regulator malfunction at a compressor station led to temporary overpressure in a downstream pipeline segment.,"Pressure relief valves activated automatically.
+Regulator station shut down and recalibrated.
+Preventive maintenance schedules adjusted for all pressure regulators.",No injuries reported.
+125,🟡 Minor,Minor,"February 6, 2023","Pittsburgh, Pennsylvania",XYZ Pipeline Company,None (Near Miss),Guide 128,"A construction company failed to verify underground pipelines before digging, narrowly avoiding damaging a crude oil transmission pipeline.","Work halted, and regulatory authorities notified.
+Public awareness campaign launched about safe excavation near pipelines.
+Excavation companies required to undergo additional safety training.",No injuries reported.
+126,🟡 Minor,Minor,"October 21, 2022","Baton Rouge, Louisiana",XYZ Pipeline Company,Diesel Fuel (UN 1202),Guide 128,"An aging section of pipeline developed a small leak, allowing diesel fuel to seep into nearby soil.","Pipeline section isolated, and contaminated soil removed.
+Aging pipeline infrastructure prioritized for replacement.
+Long-term monitoring for potential future leaks in the area.",No injuries reported.
+127,🟠 Moderate,Moderate,"July 14, 2023","Corpus Christi, Texas",XYZ Pipeline Company,None (Fire Event),Guide 115,"A lubrication system failure in a compressor unit caused overheating, igniting nearby residues and triggering a fire.","Fire suppression system activated immediately.
+Lubrication systems inspected and maintenance procedures improved.
+Temperature monitoring sensors added to detect overheating early.",No injuries reported.
+128,⚪ Near Miss / No Impact,,"January 3, 2023","New Orleans, Louisiana",XYZ Pipeline Company,Jet Fuel (UN 1863),Guide 128,A faulty hose coupling during fuel transfer operations resulted in a small spill of jet fuel at a loading terminal.,"Operations stopped, and fuel spill contained.
+Defective hose coupling replaced with an upgraded design.
+Routine coupling integrity testing added to maintenance procedures.",No injuries reported.
+129,🟡 Minor,Minor,"May 29, 2021","Tulsa, Oklahoma",XYZ Pipeline Company,Natural Gas (UN 1971),Guide 115,"A third-party excavation crew struck a high-pressure natural gas pipeline, causing an immediate rupture and gas release.","Pipeline shutdown and emergency responders deployed.
+Excavation company fined for non-compliance with safety regulations.
+Public safety training reinforced for excavation crews.",Two workers suffered minor injuries from debris impact.
+130,🟡 Minor,Minor,"March 7, 2024","Oklahoma City, Oklahoma",XYZ Pipeline Company,Hydrogen Sulfide (UN 1053),Guide 117,"A valve failure in a sour gas processing unit led to a hydrogen sulfide (H₂S) gas release, triggering alarm systems.","Facility evacuated, and emergency response teams deployed.
+Gas dispersion monitored, and ventilation system engaged.
+Valve replaced, and maintenance procedures improved.",One worker suffered mild respiratory distress and received treatment on-site.
+131,🟡 Minor,Minor,"June 15, 2022","Houston, Texas",XYZ Pipeline Company,Natural Gas (UN 1971),Guide 115,A compressor station detected a gas leak caused by a failing gasket in the high-pressure pipeline connection.,"Compressor unit isolated, and faulty gasket replaced.
+All gaskets inspected and reinforced where necessary.
+Routine gasket integrity checks added to maintenance protocols.",No injuries reported.
+132,🟡 Minor,Minor,"August 19, 2023","Midland, Texas",XYZ Pipeline Company,Diesel Fuel (UN 1202),Guide 128,A hose rupture during a routine fuel transfer operation resulted in a minor diesel spill at a pump station.,"Pumping operations halted, and spill contained using absorbent materials.
+Hose replaced, and quality control procedures reviewed.
+Routine hose inspections increased to prevent future failures.",No injuries reported.
+133,🟡 Minor,Minor,"March 3, 2021","Denver, Colorado",XYZ Pipeline Company,None (Near Miss),Guide 128,"A third-party excavation crew failed to check for underground pipelines, scraping the protective coating of an oil pipeline without causing a leak.","Pipeline operators conducted integrity assessments to confirm no damage.
+Excavation crew fined for violating dig safety regulations.
+Public awareness campaign launched for excavation safety.",No injuries reported.
+134,🟠 Moderate,Moderate,"September 11, 2022","Cheyenne, Wyoming",XYZ Pipeline Company,None (Fire Event),Guide 115,"A turbocharger in a compressor unit overheated, leading to a small fire in the engine compartment.","Fire suppression system activated automatically.
+Station shut down for inspection and repairs.
+Additional cooling systems installed to prevent future overheating.",No injuries reported.
+135,🟡 Minor,Minor,"December 28, 2023","Pittsburgh, Pennsylvania",XYZ Pipeline Company,Liquefied Petroleum Gas (LPG) (UN 1075),Guide 115,"A sudden pressure spike in an LPG pipeline caused a pipeline rupture, leading to an uncontrolled release of gas.","Emergency shutdown activated, and pipeline section isolated.
+Gas dispersion monitored before allowing reentry.
+Pressure control systems inspected and recalibrated.",No injuries reported.
+136,🟡 Minor,Minor,"July 8, 2021","Baton Rouge, Louisiana",XYZ Pipeline Company,Crude Oil (UN 1267),Guide 128,"A series of heavy rains caused minor ground shifting, leading to a stress fracture in an underground oil pipeline.","Pipeline section isolated, and oil spill contained.
+Geotechnical assessments conducted to evaluate soil stability.
+Pipeline reinforced with additional support structures.",No injuries reported.
+137,🟡 Minor,Minor,"May 17, 2023","Corpus Christi, Texas",XYZ Pipeline Company,Natural Gas (UN 1971),Guide 115,"A faulty control valve failed to regulate pressure, causing an overpressure event in the gas transmission system.","Emergency venting system activated to relieve excess pressure.
+Control valve replaced and recalibrated.
+Pipeline pressure monitoring upgraded for early detection.",No injuries reported.
+138,🟡 Minor,Minor,"January 15, 2024","Oklahoma City, Oklahoma",XYZ Pipeline Company,None (Security Concern),N/A,"Security cameras captured unauthorized individuals attempting to breach a secured pipeline facility, prompting a response from security teams.","Local law enforcement notified, and security personnel deployed.
+Surveillance and alarm systems upgraded at the facility.
+Security training for staff reinforced to respond to potential threats.",No injuries reported.
+139,🟡 Minor,Minor,"October 23, 2022","Tulsa, Oklahoma",XYZ Pipeline Company,Natural Gas (UN 1971),Guide 115,"A seal failure in an underground storage well caused a minor but persistent natural gas leak, detected through monitoring systems.","Storage facility operations halted, and leak sealed.
+Seals replaced, and well integrity testing conducted.
+Preventive maintenance schedule increased for all storage wells.",No injuries reported.
+140,🟡 Minor,Minor,"February 11, 2023","New Orleans, Louisiana",XYZ Pipeline Company,Crude Oil (UN 1267),Guide 128,"A faulty seal in a crude oil pump system at a transfer station resulted in a spill of 5,000 gallons of oil.","Transfer operations halted, and spilled oil contained.
+Pump seal replaced and monitored for further leaks.
+Routine inspections increased for all transfer equipment.",No injuries reported.
+141,🟡 Minor,Minor,"June 22, 2023","Houston, Texas",XYZ Pipeline Company,Natural Gas (UN 1971),Guide 115,"A compressor station experienced an unplanned shutdown due to a malfunctioning gas control valve, leading to a minor leak before the station was depressurized.","Emergency shutdown initiated, and affected pipeline section isolated.
+Control valve repaired and system recalibrated.
+Compressor station maintenance frequency increased.",No injuries reported.
+142,⚪ Near Miss / No Impact,,"August 30, 2021","Midland, Texas",XYZ Pipeline Company,Diesel Fuel (UN 1202),Guide 128,"A routine pipeline inspection detected external corrosion, which resulted in a small diesel leak into the soil.","Pipeline shutdown and spill containment measures activated.
+Pipeline section excavated and corroded segment replaced.
+Corrosion control measures, including cathodic protection, reinforced.",No injuries reported.
+143,🟡 Minor,Minor,"March 5, 2022","Denver, Colorado",XYZ Pipeline Company,Crude Oil (UN 1267),Guide 128,"A pressure sensor failure in an oil transmission pipeline led to a temporary overpressure event, triggering emergency shutdown protocols.","Automated relief system activated to safely release excess pressure.
+Sensor replaced and pressure monitoring system recalibrated.
+Preventive maintenance schedule updated for pressure control devices.",No injuries reported.
+144,🟡 Minor,Minor,"October 12, 2022","Cheyenne, Wyoming",XYZ Pipeline Company,None (Near Miss),Guide 115,A construction crew operating heavy machinery was discovered digging within 20 feet of a high-pressure gas transmission pipeline without proper authorization.,"Excavation work halted, and crew removed from the site.
+Pipeline integrity assessment conducted to ensure no damage.
+Regulatory fines issued against the contractor.",No injuries reported.
+145,🟠 Moderate,Moderate,"July 4, 2023","Pittsburgh, Pennsylvania",XYZ Pipeline Company,None (Fire Event),Guide 115,A short circuit in a processing facility’s electrical panel resulted in a small fire in the control room.,"Fire suppression system activated, preventing damage to gas processing equipment.
+Electrical panel inspected, replaced, and facility power restored.
+Routine electrical system checks reinforced to detect early failures.",No injuries reported.
+146,🟡 Minor,Minor,"November 14, 2021","Baton Rouge, Louisiana",XYZ Pipeline Company,Natural Gas (UN 1971),Guide 115,"A tree root penetrated the protective coating of an underground gas pipeline, leading to external corrosion and a slow leak.","Pipeline shutdown, and affected section excavated and repaired.
+Vegetation management protocols reviewed and updated.
+Tree root barriers installed along pipeline right-of-way.",No injuries reported.
+147,⚪ Near Miss / No Impact,,"May 27, 2023","Corpus Christi, Texas",XYZ Pipeline Company,Liquefied Petroleum Gas (LPG) (UN 1075),Guide 115,"A previously repaired pipeline weld failed under pressure, leading to a small LPG release, which was detected via remote monitoring.","Pipeline section isolated and emergency repair conducted.
+Welding standards reviewed and quality control procedures enhanced.
+Pipeline integrity testing expanded for recent weld repairs.",No injuries reported.
+148,🟠 Moderate,Moderate,"January 9, 2023","New Orleans, Louisiana",XYZ Pipeline Company,None (Fire Event),Guide 128,"A lightning strike ignited residual vapors around an oil storage tank, leading to a small fire that was contained within minutes.","Fire suppression system activated automatically.
+Storage tank integrity inspection conducted before resuming operations.
+Additional lightning protection installed at the facility.",No injuries reported.
+149,🟡 Minor,Minor,"August 22, 2021","Tulsa, Oklahoma",XYZ Pipeline Company,Crude Oil (UN 1267),Guide 128,"A pipeline segment with structural fatigue developed a stress crack, leading to a slow oil leak that was detected during a routine patrol.","Pipeline section shut down, and leak contained.
+Aging pipeline sections prioritized for replacement.
+Enhanced pipeline integrity testing scheduled.",No injuries reported.
+150,🟡 Minor,Minor,"March 19, 2024","Oklahoma City, Oklahoma",XYZ Pipeline Company,Hydrogen Sulfide (UN 1053),Guide 117,"A control valve failure in a sour gas processing unit led to a hydrogen sulfide gas release, triggering emergency response protocols.","Facility personnel evacuated, and emergency responders deployed.
+Gas dispersion monitored before allowing personnel reentry.
+Valve replaced, and enhanced leak detection systems installed.","One worker suffered minor respiratory distress, treated on-site."
+151,⚪ Near Miss / No Impact,,"May 10, 2023","Houston, Texas",XYZ Pipeline Company,Natural Gas (UN 1971),Guide 115,"A pressure relief valve failed to reseat properly, leading to a small but continuous gas release detected by monitoring systems.","Pipeline section isolated, and faulty valve replaced.
+All similar valves inspected and recalibrated.
+Preventive maintenance program updated for valve integrity monitoring.",No injuries reported.
+152,🟡 Minor,Minor,"August 28, 2021","Midland, Texas",XYZ Pipeline Company,Diesel Fuel (UN 1202),Guide 128,"A diesel storage tank at a pump station was accidentally overfilled, causing fuel to spill into the secondary containment system.","Operations halted, and excess diesel recovered.
+Automated level monitoring installed to prevent overfills.
+Training program reinforced for proper fuel transfer procedures.",No injuries reported.
+153,🟡 Minor,Minor,"April 5, 2022","Denver, Colorado",XYZ Pipeline Company,None (Near Miss),Guide 115,"A construction crew working near a gas pipeline failed to confirm its exact location, scraping the protective coating but avoiding a rupture.","Pipeline operators conducted integrity assessments and recoated the pipeline.
+Excavation contractor fined for non-compliance.
+Additional safety awareness sessions scheduled for construction teams.",No injuries reported.
+154,🟠 Moderate,Moderate,"October 20, 2023","Cheyenne, Wyoming",XYZ Pipeline Company,None (Fire Event),Guide 115,"An electrical fault in a compressor control panel caused a small fire, temporarily disrupting station operations.","Fire suppression system activated and fire contained.
+Electrical panels inspected and damaged components replaced.
+Routine electrical inspections reinforced.",No injuries reported.
+155,🟡 Minor,Minor,"January 2, 2022","Pittsburgh, Pennsylvania",XYZ Pipeline Company,Liquefied Petroleum Gas (LPG) (UN 1075),Guide 115,"A pressure control system failure led to excessive pressure buildup, rupturing a section of an LPG transmission pipeline.","Pipeline shutdown, and affected section isolated.
+Automated relief valves upgraded for improved response times.
+Pipeline pressure control systems recalibrated.",No injuries reported.
+156,🟡 Minor,Minor,"July 14, 2021","Baton Rouge, Louisiana",XYZ Pipeline Company,Crude Oil (UN 1267),Guide 128,"A pump system failure resulted in backflow and leakage from an oil pipeline, triggering emergency shutdown procedures.","Pipeline operations halted, and leaked oil contained.
+Pump system repaired and tested for further failures.
+Emergency shutdown protocols reviewed and refined.",No injuries reported.
+157,🟡 Minor,Minor,"May 25, 2023","Corpus Christi, Texas",XYZ Pipeline Company,Natural Gas (UN 1971),Guide 115,"A glitch in the SCADA (Supervisory Control and Data Acquisition) system caused incorrect valve positioning, leading to temporary overpressure in a transmission pipeline.","Automated relief system activated.
+SCADA software updated and additional safety failsafes implemented.
+Personnel training increased on system failure response.",No injuries reported.
+158,🟠 Moderate,Moderate,"January 18, 2023","New Orleans, Louisiana",XYZ Pipeline Company,None (Fire Event),Guide 128,"A lightning strike hit the control building of a pump station, igniting minor electrical fires inside.","Fire suppression system activated automatically.
+Electrical panels inspected and replaced.
+Lightning protection system upgraded.",No injuries reported.
+159,🟡 Minor,Minor,"September 9, 2021","Tulsa, Oklahoma",XYZ Pipeline Company,Crude Oil (UN 1267),Guide 128,"A pump operator failed to close a valve properly, causing crude oil to be pumped beyond capacity, resulting in a spill.","Transfer operations halted, and spill contained.
+Pump operators retrained on proper transfer procedures.
+Additional automated shutoffs installed to prevent overfilling.",No injuries reported.
+160,🟡 Minor,Minor,"March 10, 2024","Oklahoma City, Oklahoma",XYZ Pipeline Company,Hydrogen Sulfide (UN 1053),Guide 117,"A processing plant experienced a failure in its pressure relief system, resulting in a hydrogen sulfide gas release into the facility.","Emergency alarms activated, and facility personnel evacuated.
+Gas dispersion monitored, and ventilation system engaged.
+Pressure relief system reviewed and upgraded to prevent recurrence.","One worker suffered minor exposure symptoms, treated on-site."
+161,⚪ Near Miss / No Impact,,"June 5, 2023","Houston, Texas",XYZ Pipeline Company,Natural Gas (UN 1971),Guide 115,"A manufacturing defect in a pipeline seam resulted in a small but continuous natural gas leak, detected through aerial infrared surveys.","Pipeline section isolated, and defective seam repaired.
+All similar pipeline sections inspected for potential weaknesses.
+Pipeline manufacturing standards reviewed and reinforced.",No injuries reported.
+162,🟡 Minor,Minor,"August 10, 2021","Midland, Texas",XYZ Pipeline Company,Diesel Fuel (UN 1202),Guide 128,"A transfer hose ruptured during fuel transfer operations, spilling approximately 1,500 gallons of diesel fuel within the secondary containment area.","Operations stopped, and spill contained using absorbent materials.
+All hoses inspected for potential defects and weak points.
+Routine hose pressure testing procedures strengthened.",No injuries reported.
+163,🟡 Minor,Minor,"April 21, 2022","Denver, Colorado",XYZ Pipeline Company,None (Near Miss),Guide 128,A contractor conducting roadwork unknowingly began excavating near an active crude oil transmission pipeline without notifying the operator.,"Excavation work halted immediately.
+Pipeline integrity verified to confirm no damage.
+Regulatory fines issued, and excavation safety training mandated.",No injuries reported.
+164,🟠 Moderate,Moderate,"October 15, 2023","Cheyenne, Wyoming",XYZ Pipeline Company,None (Fire Event),Guide 115,"A lubrication pump failure caused excessive friction in a gas compressor unit, leading to a small fire within the compressor housing.","Fire suppression system activated, preventing spread.
+Lubrication system replaced and preventive measures reviewed.
+Thermal sensors installed to detect early overheating signs.",No injuries reported.
+165,🟡 Minor,Minor,"January 8, 2022","Pittsburgh, Pennsylvania",XYZ Pipeline Company,Liquefied Petroleum Gas (LPG) (UN 1075),Guide 115,"A sudden temperature drop caused thermal stress in an LPG pipeline, leading to a rupture and gas release.","Pipeline operations halted, and emergency response initiated.
+Pipeline reinforced with temperature-resistant materials.
+Weather-based operational adjustments implemented.",No injuries reported.
+166,🟡 Minor,Minor,"July 19, 2021","Baton Rouge, Louisiana",XYZ Pipeline Company,Crude Oil (UN 1267),Guide 128,"A storage tank developed a crack due to long-term structural fatigue, causing a crude oil leak of approximately 10,000 gallons.","Spill containment activated, and oil recovered.
+Tank integrity assessed, and structural reinforcement implemented.
+Routine stress testing added for storage tanks.",No injuries reported.
+167,🟡 Minor,Minor,"May 11, 2023","Corpus Christi, Texas",XYZ Pipeline Company,Natural Gas (UN 1971),Guide 115,"A SCADA (Supervisory Control and Data Acquisition) system error resulted in delayed pressure relief activation, causing a temporary overpressure event.","Automated relief system activated manually by operators.
+SCADA software updated to improve response time.
+Additional operator training conducted for manual intervention.",No injuries reported.
+168,🟠 Moderate,Moderate,"February 2, 2023","New Orleans, Louisiana",XYZ Pipeline Company,None (Fire Event),Guide 128,"A lightning strike at a crude oil storage facility ignited vapors near a tank vent, causing a small fire that was contained within minutes.","Fire suppression system activated, preventing further damage.
+Lightning protection system upgraded at the facility.
+Tank venting procedures reviewed to reduce vapor accumulation.",No injuries reported.
+169,⚪ Near Miss / No Impact,,"September 3, 2021","Tulsa, Oklahoma",XYZ Pipeline Company,Crude Oil (UN 1267),Guide 128,"An aging pipeline segment developed a small crack, leading to a crude oil leak detected by remote monitoring systems.","Pipeline section shut down, and oil spill contained.
+Aging pipeline replacement project accelerated.
+Leak detection system enhanced for older pipeline sections.",No injuries reported.
+170,🟡 Minor,Minor,"March 4, 2024","Oklahoma City, Oklahoma",XYZ Pipeline Company,Hydrogen Sulfide (UN 1053),Guide 117,"A pressure valve malfunction in a sour gas processing unit caused a brief hydrogen sulfide gas release, prompting emergency evacuation.","Facility personnel evacuated, and emergency response teams deployed.
+Gas dispersion monitored to ensure safety before reentry.
+Pressure control systems reviewed and reinforced.","One worker experienced mild exposure symptoms, treated on-site."
+171,🟡 Minor,Minor,"June 14, 2023","Houston, Texas",XYZ Pipeline Company,Natural Gas (UN 1971),Guide 115,"A recently welded pipeline joint failed under pressure, resulting in a minor but continuous gas leak, detected by remote monitoring.","Pipeline section isolated, and weld repaired.
+Inspection of all recent welding work conducted.
+Enhanced training provided to welding personnel.",No injuries reported.
+172,🟡 Minor,Minor,"August 5, 2021","Midland, Texas",XYZ Pipeline Company,Diesel Fuel (UN 1202),Guide 128,"A faulty pressure relief valve on a loading arm failed to close properly, causing diesel fuel to overflow onto the terminal floor.","Operations halted, and spill contained using absorbent materials.
+Faulty valve replaced and tested.
+Additional safety inspections scheduled for all terminal equipment.",No injuries reported.
+173,🟡 Minor,Minor,"April 17, 2022","Denver, Colorado",XYZ Pipeline Company,None (Near Miss),Guide 115,"A construction crew operating heavy machinery started digging without verifying the location of underground pipelines, endangering a high-pressure gas line.","Excavation work halted, and crew removed from site.
+Pipeline integrity verified to confirm no damage.
+Regulatory fines issued, and additional training mandated.",No injuries reported.
+174,🟠 Moderate,Moderate,"October 25, 2023","Cheyenne, Wyoming",XYZ Pipeline Company,None (Fire Event),Guide 115,"An electrical panel in the compressor station short-circuited, igniting a small fire inside the control room.","Fire suppression system activated, preventing further spread.
+Electrical panel replaced, and station power restored.
+Regular electrical safety audits scheduled.",No injuries reported.
+175,🟡 Minor,Minor,"January 10, 2022","Pittsburgh, Pennsylvania",XYZ Pipeline Company,Liquefied Petroleum Gas (LPG) (UN 1075),Guide 115,"A pressure regulator malfunctioned, leading to an overpressure event and subsequent rupture in an LPG pipeline.","Pipeline operations halted, and emergency response initiated.
+Regulator replaced, and control systems upgraded.
+Pressure monitoring systems recalibrated.",No injuries reported.
+176,🟡 Minor,Minor,"July 30, 2021","Baton Rouge, Louisiana",XYZ Pipeline Company,Crude Oil (UN 1267),Guide 128,"An aging pipeline segment developed a hairline crack, leading to a slow oil leak detected by routine monitoring.","Pipeline section shut down, and damaged portion replaced.
+Aging infrastructure review conducted, and repairs prioritized.
+Pipeline integrity monitoring enhanced.",No injuries reported.
+177,🟡 Minor,Minor,"May 6, 2023","Corpus Christi, Texas",XYZ Pipeline Company,Natural Gas (UN 1971),Guide 115,"A SCADA (Supervisory Control and Data Acquisition) software error resulted in a delayed pressure release activation, leading to a temporary overpressure event.","Manual relief system activated by operators.
+SCADA software patched and additional failsafes implemented.
+Operator training conducted on responding to automation failures.",No injuries reported.
+178,🟠 Moderate,Moderate,"February 15, 2023","New Orleans, Louisiana",XYZ Pipeline Company,None (Fire Event),Guide 128,"A lightning strike at a crude oil storage tank farm ignited vapors near a tank vent, leading to a minor fire that was extinguished quickly.","Fire suppression system activated automatically.
+Storage tank inspected for integrity before resuming operations.
+Lightning protection system enhanced.",No injuries reported.
+179,⚪ Near Miss / No Impact,,"September 12, 2021","Tulsa, Oklahoma",XYZ Pipeline Company,Crude Oil (UN 1267),Guide 128,"A pipeline gasket was not seated correctly, allowing small amounts of crude oil to seep from a flange connection.","Pipeline section isolated, and gasket replaced.
+All pipeline connections reviewed for proper installation.
+Additional training provided for maintenance teams.",No injuries reported.
+180,🟡 Minor,Minor,"March 9, 2024","Oklahoma City, Oklahoma",XYZ Pipeline Company,Hydrogen Sulfide (UN 1053),Guide 117,"A valve malfunction in a refinery unit caused a brief but concentrated release of hydrogen sulfide gas, prompting an emergency shutdown.","Emergency alarms activated, and refinery personnel evacuated.
+Ventilation systems engaged, and gas dispersion monitored.
+Defective valve replaced, and leak detection systems upgraded.","One worker suffered mild exposure symptoms, treated on-site."
+181,🟡 Minor,Minor,"May 2, 2023","Houston, Texas",XYZ Pipeline Company,Natural Gas (UN 1971),Guide 115,"Extreme cold weather caused frost heave, leading to shifting soil conditions that stressed and cracked a buried gas pipeline.","Pipeline section isolated, and crack repaired.
+Geotechnical assessments conducted to evaluate soil movement risks.
+Additional support structures installed in frost-prone areas.",No injuries reported.
+182,🟡 Minor,Minor,"August 8, 2021","Midland, Texas",XYZ Pipeline Company,Diesel Fuel (UN 1202),Guide 128,"A pump station control valve failed to close completely, leading to an overflow of diesel into the containment basin.","Pumping operations halted, and spill contained.
+Valve repaired, and inspection schedule updated.
+Automated valve shutoff systems reviewed and improved.",No injuries reported.
+183,🟡 Minor,Minor,"April 12, 2022","Denver, Colorado",XYZ Pipeline Company,None (Near Miss),Guide 115,"A construction crew operating heavy equipment unknowingly dug within five feet of a high-pressure gas pipeline, scraping its protective coating.","Excavation work halted immediately.
+Pipeline coating repaired and integrity assessment performed.
+Contractor fined for violating dig safety regulations.",No injuries reported.
+184,🟠 Moderate,Moderate,"October 27, 2023","Cheyenne, Wyoming",XYZ Pipeline Company,None (Fire Event),Guide 115,A gas processing plant reported a fire caused by the ignition of flammable vapors near a gas dehydration unit.,"Fire suppression system activated and fire contained.
+Facility shut down for damage assessment.
+Upgraded ventilation system to prevent future vapor buildup.",No injuries reported.
+185,🟡 Minor,Minor,"January 12, 2022","Pittsburgh, Pennsylvania",XYZ Pipeline Company,Liquefied Petroleum Gas (LPG) (UN 1075),Guide 115,"A pipeline section weakened by long-term metal fatigue developed a rupture under pressure, releasing LPG into the environment.","Emergency shutdown and evacuation of the surrounding area.
+Damaged pipeline section replaced with reinforced material.
+Pipeline monitoring frequency increased in aging sections.",No injuries reported.
+186,🟡 Minor,Minor,"July 22, 2021","Baton Rouge, Louisiana",XYZ Pipeline Company,Crude Oil (UN 1267),Guide 128,"A flange connection on a newly installed pipeline segment was improperly sealed, leading to a slow crude oil leak.","Pipeline section shut down, and flange resealed.
+Quality control procedures improved for flange installations.
+Leak detection inspections increased for new pipeline segments.",No injuries reported.
+187,🟡 Minor,Minor,"May 8, 2023","Corpus Christi, Texas",XYZ Pipeline Company,Natural Gas (UN 1971),Guide 115,"A blocked pressure relief valve failed to vent excess pressure, causing a temporary overpressure event in a gas transmission pipeline.","Pipeline depressurized manually to prevent rupture.
+Relief valve repaired and blockage removed.
+Routine valve inspections scheduled to prevent future blockages.",No injuries reported.
+188,🟠 Moderate,Moderate,"February 18, 2023","New Orleans, Louisiana",XYZ Pipeline Company,None (Fire Event),Guide 128,"A lightning strike at an oil storage facility ignited vapors near a tank vent, causing a localized fire that was quickly extinguished.","Fire suppression system activated automatically.
+Tank integrity assessment performed.
+Facility lightning protection system enhanced.",No injuries reported.
+189,⚪ Near Miss / No Impact,,"September 18, 2021","Tulsa, Oklahoma",XYZ Pipeline Company,Crude Oil (UN 1267),Guide 128,"A pipeline segment installed in the 1980s developed a small stress fracture, leading to a slow crude oil leak.","Pipeline section isolated, and damaged portion replaced.
+Aging pipeline replacement program accelerated.
+Remote leak detection system improved.",No injuries reported.
+190,🟡 Minor,Minor,"March 13, 2024","Oklahoma City, Oklahoma",XYZ Pipeline Company,Hydrogen Sulfide (UN 1053),Guide 117,"A pressure relief valve in a refinery unit failed to reseat properly, leading to a release of hydrogen sulfide gas.","Emergency alarms activated, and personnel evacuated.
+Valve repaired, and gas dispersion monitored.
+Additional failsafe mechanisms installed in pressure control systems.","One worker experienced mild exposure symptoms, treated on-site."
+191,🟡 Minor,Minor,"June 20, 2023","Houston, Texas",XYZ Pipeline Company,Natural Gas (UN 1971),Guide 115,"A corroded section of an underground gas pipeline developed a pinhole leak, detected through routine aerial surveys.","Pipeline section isolated, and corroded portion replaced.
+Enhanced corrosion protection measures applied.
+Pipeline inspection frequency increased in corrosion-prone areas.",No injuries reported.
+192,🟡 Minor,Minor,"August 14, 2021","Midland, Texas",XYZ Pipeline Company,Diesel Fuel (UN 1202),Guide 128,"An operator failed to shut off a transfer valve in time, leading to diesel overflow into a containment area.","Operations halted, and spill contained using absorbents.
+Operator retrained on proper transfer protocols.
+Automated shutoff systems installed to prevent similar incidents.",No injuries reported.
+193,🟡 Minor,Minor,"April 5, 2022","Denver, Colorado",XYZ Pipeline Company,None (Near Miss),Guide 115,"A contractor performing foundation work failed to verify the presence of underground pipelines, coming within three feet of a high-pressure gas line.","Excavation work halted immediately.
+Pipeline integrity verified through inspection.
+Contractor fined, and safety training mandated.",No injuries reported.
+194,🟠 Moderate,Moderate,"October 30, 2023","Cheyenne, Wyoming",XYZ Pipeline Company,None (Fire Event),Guide 128,"An electrical short in a pump control panel caused a small fire, shutting down station operations temporarily.","Fire suppression system activated, and fire contained.
+Electrical panel replaced, and station power restored.
+Routine electrical safety audits increased.",No injuries reported.
+195,🟡 Minor,Minor,"January 20, 2022","Pittsburgh, Pennsylvania",XYZ Pipeline Company,Liquefied Petroleum Gas (LPG) (UN 1075),Guide 115,"A weld repair on an LPG pipeline failed prematurely, causing a minor gas release, detected via remote monitoring.","Pipeline section isolated, and defective weld repaired.
+Additional quality controls introduced for welding procedures.
+Enhanced pipeline integrity inspections implemented.",No injuries reported.
+196,🟡 Minor,Minor,"July 26, 2021**","Baton Rouge, Louisiana",XYZ Pipeline Company,Crude Oil (UN 1267),Guide 128,"A minor earthquake (4.5 magnitude) caused ground movement, leading to a stress fracture in a buried crude oil pipeline.","Pipeline section isolated, and spill contained.
+Geotechnical surveys conducted to assess seismic risks.
+Seismic-resistant pipeline reinforcement installed in the area.",No injuries reported.
+197,🟡 Minor,Minor,"May 14, 2023","Corpus Christi, Texas",XYZ Pipeline Company,Natural Gas (UN 1971),Guide 115,"A vent line blockage prevented pressure release, leading to temporary overpressure in a transmission pipeline.","Emergency venting conducted manually.
+Blocked vent line cleared and additional inspections performed.
+Pipeline pressure monitoring systems upgraded.",No injuries reported.
+198,🟠 Moderate,Moderate,"February 25, 2023","New Orleans, Louisiana",XYZ Pipeline Company,None (Fire Event),Guide 128,"A lightning strike at a refinery storage tank ignited vapors, leading to a localized fire that was extinguished quickly.","Fire suppression system activated automatically.
+Tank integrity assessment performed.
+Lightning protection systems improved at the facility.",No injuries reported.
+199,🟡 Minor,Minor,"September 25, 2021","Tulsa, Oklahoma",XYZ Pipeline Company,Crude Oil (UN 1267),Guide 128,"An aging pipeline segment with external corrosion developed a slow leak, detected during a routine patrol.","Pipeline section shut down, and corroded segment replaced.
+Cathodic protection system reviewed and reinforced.
+Pipeline monitoring upgraded for early corrosion detection.",No injuries reported.
+200,🟡 Minor,Minor,"March 15, 2024","Oklahoma City, Oklahoma",XYZ Pipeline Company,Hydrogen Sulfide (UN 1053),Guide 117,"A pressure relief valve at a refinery processing unit failed, causing a brief release of hydrogen sulfide gas into the atmosphere.","Emergency alarms activated, and personnel evacuated.
+Ventilation systems engaged, and gas dispersion monitored.
+Defective valve replaced, and additional failsafe mechanisms installed.","One worker experienced mild exposure symptoms, treated on-site."

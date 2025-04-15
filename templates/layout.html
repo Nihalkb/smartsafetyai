@@ -10,36 +10,101 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/custom.css') }}">
+    <style>
+        /* -------- Light Mode Overrides for Navbar & Footer -------- */
+        body.light-mode .navbar,
+        body.light-mode .footer {
+          background-color: #f0ebe5 !important;
+          color: #2f2f2f !important;
+        }
+      
+        body.light-mode .navbar .nav-link,
+        body.light-mode .navbar .navbar-brand,
+        body.light-mode .footer span {
+          color: #2f2f2f !important;
+        }
+      
+        body.light-mode .navbar .nav-link:hover,
+        body.light-mode .navbar .navbar-brand:hover {
+          color: #387378 !important;
+        }
+      
+        body.light-mode .navbar .nav-link.active {
+          font-weight: 600;
+          color: #41858c !important;
+        }
+      
+        body.light-mode .navbar .btn-outline-info {
+          border-color: #41858c;
+          color: #41858c;
+        }
+      
+        body.light-mode .navbar .btn-outline-info:hover {
+          background-color: #41858c;
+          color: #ffffff;
+        }
+      
+        body.light-mode .bg-dark {
+          background-color: #f0ebe5 !important;
+        }
+      
+        body.light-mode .text-muted {
+          color: #5c5c5c !important;
+        }
+        .straive-logo {
+            transition: transform 0.3s ease;
+        }
+        .straive-logo:hover {
+            transform: scale(1.05);
+        }
+
+      </style>
+      
     {% block head %}{% endblock %}
+
 </head>
 <body>
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
             <a class="navbar-brand" href="/">
-                <i class="fas fa-shield-alt text-info me-2"></i>
-                SafetyAI
+              <i class="fas fa-shield-alt text-info me-2"></i> SafetyAI
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+              aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" href="/"><i class="fas fa-home me-1"></i> Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/search"><i class="fas fa-search me-1"></i> NLP Search</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/chat"><i class="fas fa-comments me-1"></i> Safety Chat</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="/risk-assessment"><i class="fas fa-chart-line me-1"></i> Risk Assessment</a>
-                    </li>
-                </ul>
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="/"><i class="fas fa-home me-1"></i> Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/search"><i class="fas fa-search me-1"></i> Search</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/chat"><i class="fas fa-comments me-1"></i> Safety Chat</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="/risk-assessment"><i class="fas fa-chart-line me-1"></i> Risk Assessment</a>
+                </li>
+              </ul>
+              <div class="d-flex align-items-center ms-auto">
+                <!-- Straive Logo -->
+                <img src="{{ url_for('static', filename='images/logo.png') }}" 
+                     alt="Straive Logo" 
+                     class="straive-logo me-2" 
+                     style="height: 38px; object-fit: contain;">
+              
+                <!-- Theme Toggle -->
+                <button id="theme-toggle" class="btn btn-sm btn-outline-info" title="Toggle light/dark mode">
+                  <i id="theme-icon" class="fas fa-moon"></i>
+                </button>
+              </div>
+              
             </div>
-        </div>
+          </div>
+          
     </nav>
 
     <!-- Main Content -->
@@ -58,6 +123,27 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Chart.js -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          const themeToggle = document.getElementById("theme-toggle");
+          const themeIcon = document.getElementById("theme-icon");
+      
+          // Apply saved theme preference
+          const savedTheme = localStorage.getItem("theme");
+          if (savedTheme === "light") {
+            document.body.classList.add("light-mode");
+            themeIcon.classList.replace("fa-moon", "fa-sun");
+          }
+      
+          themeToggle.addEventListener("click", function () {
+            const isLight = document.body.classList.toggle("light-mode");
+            themeIcon.classList.toggle("fa-sun", isLight);
+            themeIcon.classList.toggle("fa-moon", !isLight);
+            localStorage.setItem("theme", isLight ? "light" : "dark");
+          });
+        });
+      </script>
+      
     {% block scripts %}{% endblock %}
 </body>
 </html>

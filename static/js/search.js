@@ -1,150 +1,276 @@
+// Enhances the incident filter UI with AI-powered search integration
+
 document.addEventListener("DOMContentLoaded", function () {
-    const searchInput = document.getElementById("search-input");
-    const searchButton = document.getElementById("search-button");
-    const loadingSpinner = document.getElementById("loading-spinner");
+    const applyButton = document.getElementById("apply-filters");
     const searchResults = document.getElementById("search-results");
-    const aiAnswer = document.getElementById("ai-answer");
     const resultDocuments = document.getElementById("result-documents");
-    const exampleQueries = document.querySelectorAll(".example-query");
+    let chartContainer = document.getElementById("chart-container");
+    const nlpInput = document.getElementById("nlp-query");
+    const nlpSearchBtn = document.getElementById("submit-nlp-search");
+    const toggle = document.getElementById("toggle-advanced-search");
+    const aiCard = document.getElementById("ai-insight");
+    const aiText = document.getElementById("ai-answer-text");
+    const filterPanel = document.querySelector(".filter-section#filter-panel");
+    const filterSummaryBox = document.getElementById("parsed-filter-summary");
+    const chartTypeSelect = document.getElementById("chart-type-select");
 
-    // Set up event listeners
-    searchButton.addEventListener("click", performSearch);
-    searchInput.addEventListener("keypress", function (e) {
-        if (e.key === "Enter") {
-            performSearch();
-        }
+    let currentFilters = null;
+
+    toggle.checked = false;
+    filterPanel.style.display = "none";
+    nlpInput.closest(".filter-section").style.display = "block";
+
+    toggle.addEventListener("change", function () {
+        const advancedMode = toggle.checked;
+        filterPanel.style.display = advancedMode ? "block" : "none";
+        nlpInput.closest(".filter-section").style.display = advancedMode ? "none" : "block";
+        aiCard.style.display = "none";
+        filterSummaryBox.style.display = "none";
+        chartContainer.innerHTML = "";
     });
 
-    // Handle example queries
-    exampleQueries.forEach(example => {
-        example.addEventListener("click", function () {
-            const query = this.getAttribute("data-query");
-            searchInput.value = query;
-            performSearch();
-        });
+    function isIncidentQuery(query) {
+        const incidentKeywords = ["incident", "leak", "spill", "injur", "explosion", "pipeline"];
+        return incidentKeywords.some(keyword => query.toLowerCase().includes(keyword));
+    }
+
+    async function loadChart(filters) {
+        if (!filters) return;
+
+        // Remove and recreate chart container to fully reset DOM and memory
+        const oldContainer = chartContainer;
+        const parent = oldContainer.parentElement;
+        const newContainer = document.createElement("div");
+        newContainer.id = "chart-container";
+        newContainer.className = "chart-container";
+        parent.replaceChild(newContainer, oldContainer);
+        chartContainer = newContainer;
+
+        try {
+            const res = await fetch("/api/incidents/chart", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ ...filters, chart_type: chartTypeSelect.value })
+            });
+
+            const data = await res.json();
+
+            if (data.chart) {
+                const img = document.createElement("img");
+                img.src = data.chart;
+                img.alt = "Incident chart";
+                img.classList.add("img-fluid", "rounded", "mt-2");
+                chartContainer.appendChild(img);
+            } else {
+                chartContainer.innerHTML = `
+                    <div class="text-muted small border rounded p-2 mt-2" style="background-color: var(--bs-light); color: #555;">
+                        No chart available for this query.
+                    </div>`;
+            }
+        } catch (err) {
+            console.error("Chart fetch error:", err);
+            chartContainer.innerHTML = `
+                <div class="alert alert-warning mt-2">
+                    Failed to load chart. Please try again.
+                </div>`;
+        }
+    }
+
+    chartTypeSelect.addEventListener("change", async function () {
+        await loadChart(currentFilters);
     });
 
-    function performSearch() {
-        const query = searchInput.value.trim();
+    nlpSearchBtn.addEventListener("click", async function () {
+        const query = nlpInput.value.trim();
+        if (!query) return;
 
-        if (!query) {
-            showError("Please enter a search query.");
-            return;
-        }
-
-        // Show loading spinner
-        loadingSpinner.style.display = "block";
+        resultDocuments.innerHTML = "";
+        chartContainer.innerHTML = "";
+        aiCard.style.display = "none";
+        filterSummaryBox.style.display = "none";
         searchResults.style.display = "none";
-        aiAnswer.innerHTML = "";
-        resultDocuments.innerHTML = "";
 
-        // Make API request
-        fetch("/api/search", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-            },
-            body: JSON.stringify({ query: query }),
-        })
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error("Network response was not ok");
+        aiText.innerText = "Loading answer...";
+        aiCard.style.display = "block";
+
+        try {
+            let data;
+            if (isIncidentQuery(query)) {
+                const res = await fetch("/api/incidents/filter", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ query })
+                });
+                data = await res.json();
+
+                aiText.innerText = (data.ai_summary && !data.ai_summary.includes("Unable to generate response"))
+                    ? data.ai_summary : "No insight found.";
+
+                if (data.results && data.results.length > 0) {
+                    data.results.forEach((incident) => {
+                        resultDocuments.appendChild(createResultCard(incident));
+                    });
+                } else {
+                    resultDocuments.innerHTML = '<div class="alert alert-info">No matching incidents found.</div>';
                 }
-                return response.json();
-            })
-            .then(data => {
-                loadingSpinner.style.display = "none";
-                displayResults(data);
-            })
-            .catch(error => {
-                console.error("Error during search:", error);
-                loadingSpinner.style.display = "none";
-                showError("An error occurred while searching. Please try again.");
-            });
-    }
 
-    function displayResults(data) {
-        // Clear previous results
-        aiAnswer.innerHTML = "";
+                currentFilters = data.filters || { query };
+                await loadChart(currentFilters);
+            } else {
+                const res = await fetch("/api/search", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ query })
+                });
+                data = await res.json();
+
+                aiText.innerText = (data.answers && !data.answers.includes("Unable to generate response"))
+                    ? data.answers : "No answer found.";
+
+                let foundResults = false;
+
+                if (data.incidents && data.incidents.length > 0) {
+                    data.incidents.forEach((incident) => {
+                        resultDocuments.appendChild(createResultCard(incident));
+                    });
+                    foundResults = true;
+                }
+
+                if (!foundResults) {
+                    resultDocuments.innerHTML = '<div class="alert alert-info">No matching incidents or documents found.</div>';
+                }
+
+                currentFilters = { query };
+                await loadChart(currentFilters);
+            }
+
+            if (data.filters) {
+                filterSummaryBox.innerText = "Parsed Filters: " + Object.entries(data.filters)
+                    .filter(([_, val]) => val !== null && val !== "")
+                    .map(([key, val]) => `${key}: ${val}`)
+                    .join(", ");
+                filterSummaryBox.style.display = "block";
+            }
+            searchResults.style.display = "block";
+        } catch (err) {
+            console.error("NLP Search error:", err);
+            aiText.innerText = "Error loading answer.";
+        }
+    });
+
+    applyButton.addEventListener("click", async function () {
+        const filters = gatherFilters();
+        currentFilters = filters;
+
         resultDocuments.innerHTML = "";
+        chartContainer.innerHTML = "";
+        searchResults.style.display = "none";
+        aiCard.style.display = "none";
+        filterSummaryBox.style.display = "none";
 
-        // Format and display AI-generated answer
-        const formattedAnswer = formatAnswer(data.answers);
-        aiAnswer.innerHTML = formattedAnswer;
-
-        // Display ranked source documents
-        if (data.results && data.results.length > 0) {
-            // Sort results by highest similarity score
-            let sortedResults = data.results.sort((a, b) => b.score - a.score);
-
-            sortedResults.forEach(result => {
-                const resultCard = createResultCard(result);
-                resultDocuments.appendChild(resultCard);
+        try {
+            const res = await fetch("/api/incidents/filter", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(filters)
             });
-        } else {
-            resultDocuments.innerHTML =
-                '<div class="alert alert-info">No source documents found for this query.</div>';
+            const data = await res.json();
+
+            if (data.results && data.results.length > 0) {
+                data.results.forEach((incident) => {
+                    resultDocuments.appendChild(createResultCard(incident));
+                });
+            } else {
+                resultDocuments.innerHTML = '<div class="alert alert-info">No incidents matched your filters.</div>';
+            }
+
+            if (data.ai_summary && !data.ai_summary.includes("Unable to generate response")) {
+                aiText.innerText = data.ai_summary;
+                aiCard.style.display = "block";
+            }
+
+            if (data.filters) {
+                filterSummaryBox.innerText = "Parsed Filters: " + Object.entries(data.filters)
+                    .filter(([_, val]) => val !== null && val !== "")
+                    .map(([key, val]) => `${key}: ${val}`)
+                    .join(", ");
+                filterSummaryBox.style.display = "block";
+            }
+
+            searchResults.style.display = "block";
+            await loadChart(currentFilters);
+        } catch (err) {
+            console.error("Filter search error:", err);
         }
 
-        // Show results section
-        searchResults.style.display = "block";
+        try {
+            if (!aiText.innerText || aiText.innerText.trim().length === 0 ||
+                aiText.innerText.includes("Unable to generate response")) {
+                const prompt = buildQueryFromFilters(filters);
+                const res = await fetch("/api/search", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ query: prompt })
+                });
+                const data = await res.json();
+
+                if (data.answers && !data.answers.includes("Unable to generate response")) {
+                    aiText.innerText = data.answers;
+                    aiCard.style.display = "block";
+                }
+            }
+        } catch (err) {
+            console.error("AI augmentation error:", err);
+        }
+    });
+
+    function gatherFilters() {
+        const injuriesVal = document.getElementById("filter-injuries").value;
+        const injuryFlag = injuriesVal === "yes" ? true : injuriesVal === "no" ? false : null;
+
+        return {
+            material: document.getElementById("filter-material").value.trim(),
+            location_contains: document.getElementById("filter-location").value.trim(),
+            from_year: parseInt(document.getElementById("filter-from-year").value) || null,
+            to_year: parseInt(document.getElementById("filter-to-year").value) || null,
+            has_injuries: injuryFlag,
+            severity: document.getElementById("filter-severity")?.value.trim() || null
+        };
     }
 
-    function formatAnswer(answer) {
-        if (!answer) return "<p class='text-muted'>No AI-generated response available.</p>";
-
-        // Replace newlines with HTML line breaks
-        let formattedAnswer = answer.replace(/\n/g, "<br>");
-
-        // Highlight key safety terms
-        const importantTerms = [
-            "Emergency", "Protocol", "Hazard", "Risk", "Critical", "Warning",
-            "Caution", "Danger", "Safety", "Procedure", "Guideline"
-        ];
-
-        importantTerms.forEach(term => {
-            const regex = new RegExp(`\\b${term}\\b`, "gi");
-            formattedAnswer = formattedAnswer.replace(regex, '<span class="text-info">$&</span>');
-        });
-
-        return formattedAnswer;
+    function buildQueryFromFilters(filters) {
+        let query = "Show incidents";
+        if (filters.material) query += ` involving ${filters.material}`;
+        if (filters.location_contains) query += ` in locations including ${filters.location_contains}`;
+        if (filters.from_year || filters.to_year)
+            query += ` from ${filters.from_year || "any year"} to ${filters.to_year || "present"}`;
+        if (filters.has_injuries !== null)
+            query += filters.has_injuries ? ", with injuries" : ", without injuries";
+        if (filters.severity) query += ` with ${filters.severity} severity`;
+        return query;
     }
 
-    function createResultCard(result) {
+    function createResultCard(data) {
         const card = document.createElement("div");
         card.className = "card result-card mb-3";
 
-        let cardContent = `
-            <div class="card-header d-flex justify-content-between align-items-center">
-                <h6 class="mb-0">${result.file || "Untitled Document"}</h6>
-                <span class="badge bg-secondary source-badge">Relevance: ${Math.round(result.score * 100)}%</span>
-            </div>
-            <div class="card-body">
-                <p>${result.snippet || "No content available"}</p>
-            </div>
-        `;
+        const title = data["Date"] ? `${data["Date"]} – ${data["Location"] || ""}` : "Document/Incident";
 
-        card.innerHTML = cardContent;
+        card.innerHTML = `
+        <div class="card dynamic-result mb-3">
+          <div class="card-header">
+            <h6 class="mb-0">${title}</h6>
+          </div>
+          <div class="card-body">
+            <p><strong>Operator/Source:</strong> ${data["Pipeline Operator"] || data["doc"] || "N/A"}</p>
+            <p><strong>Material:</strong> ${data["Material Released"] || "N/A"}</p>
+            <p><strong>Description:</strong> ${data["Incident Description"] || data["text"] || "No description available"}</p>
+            <p><strong>Response/Notes:</strong> ${data["Response Actions"] || "N/A"}</p>
+            <p><strong>Casualties/Injuries:</strong> ${data["Casualties & Injuries"] || "N/A"}</p>
+          </div>
+        </div>
+      `;
+
         return card;
-    }
-
-    function showError(message) {
-        let errorAlert = document.getElementById("search-error");
-
-        if (!errorAlert) {
-            errorAlert = document.createElement("div");
-            errorAlert.id = "search-error";
-            errorAlert.className = "alert alert-danger mt-3";
-            searchInput.parentNode.parentNode.appendChild(errorAlert);
-        }
-
-        errorAlert.textContent = message;
-
-        // Auto-hide after 4 seconds
-        setTimeout(() => {
-            if (errorAlert.parentNode) {
-                errorAlert.parentNode.removeChild(errorAlert);
-            }
-        }, 4000);
     }
 });

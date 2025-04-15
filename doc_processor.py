@@ -18,11 +18,18 @@ class DocProcessor:
             raise FileNotFoundError(f"Folder not found: {folder_path}")
 
     def _extract_text_from_pdf(self, pdf_path):
-        """Extracts text from a PDF file."""
+        """Extracts text from a PDF file and prefixes each page with a header indicating the page number."""
         try:
             doc = fitz.open(pdf_path)
-            text = "\n".join([page.get_text("text") for page in doc])
-            return text.lower()  # Lowercasing for consistency
+            texts = []
+            for page_no, page in enumerate(doc):
+                # Retrieve the page text
+                page_text = page.get_text("text")
+                # Add a header with the page number
+                header = f"PAGE: {page_no + 1}"
+                texts.append(f"{header}\n{page_text}")
+            # Join pages with extra newline separation
+            return "\n\n".join(texts)
         except Exception as e:
             logger.error(f"Error extracting text from PDF {pdf_path}: {e}")
             return ""
@@ -32,7 +39,7 @@ class DocProcessor:
         try:
             doc = docx.Document(docx_path)
             text = "\n".join([para.text for para in doc.paragraphs])
-            return text.lower()
+            return text
         except Exception as e:
             logger.error(f"Error extracting text from DOCX {docx_path}: {e}")
             return ""

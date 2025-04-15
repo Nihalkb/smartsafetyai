@@ -2,195 +2,533 @@
 
 {% block head %}
 <style>
+    body {
+      font-size: clamp(14px, 1.5vw, 16px);
+    }
+  
+    .page-container {
+      position: relative;
+      min-height: 100vh;
+      background-color: var(--bs-gray-900);
+      color: #f0f0f0;
+      font-family: 'Open Sans', sans-serif;
+      padding-top: 70px;
+    }
+  
+    .main-content {
+      margin-left: 60px;
+      margin-right: 20px;
+      padding: 1rem;
+      min-height: calc(100vh - 70px);
+    }
+  
     .chat-container {
-        max-width: 800px;
-        margin: 0 auto;
-        display: flex;
-        flex-direction: column;
-        height: calc(100vh - 200px);
-        min-height: 600px;
+      max-width: 1000px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
     }
-
+  
     .chat-header {
-        padding: 1rem 0;
-        margin-bottom: 1rem;
-        text-align: center;
+      text-align: center;
+      margin-bottom: 1rem;
+      position: relative;
     }
-
+  
+    .chat-header h1 {
+      margin: 0;
+      font-size: clamp(1.8rem, 3vw, 2rem);
+      color: #ffffff;
+    }
+  
+    .chat-header p {
+      margin: 0.25rem 0 0;
+      font-size: clamp(0.9rem, 2.5vw, 1.05rem);
+      color: #cccccc;
+    }
+  
     .chat-messages {
-        flex: 1;
-        overflow-y: auto;
-        padding: 1rem;
-        background-color: var(--bs-gray-900);
-        border-radius: 0.5rem;
-        margin-bottom: 1rem;
+      flex: 1;
+      overflow-y: auto;
+      padding: 1rem;
+      background-color: var(--bs-gray-900);
+      border-radius: 0.5rem;
+      margin-bottom: 1rem;
     }
-
+  
     .message {
-        margin-bottom: 1rem;
-        max-width: 80%;
+      margin-bottom: 1rem;
+      max-width: 80%;
     }
-
+  
     .user-message {
-        margin-left: auto;
-        background-color: var(--bs-info);
-        color: var(--bs-dark);
-        border-radius: 1rem 1rem 0 1rem;
-        padding: 0.75rem 1rem;
+      margin-left: auto;
+      background-color: var(--bs-info);
+      color: var(--bs-dark);
+      border-radius: 1rem 1rem 0 1rem;
+      padding: 0.75rem 1rem;
     }
-
+  
     .system-message {
-        margin-right: auto;
-        background-color: var(--bs-gray-800);
-        border-radius: 1rem 1rem 1rem 0;
-        padding: 0.75rem 1rem;
-        white-space: pre-line;
+      margin-right: auto;
+      background-color: var(--bs-gray-800);
+      border-radius: 1rem 1rem 1rem 0;
+      padding: 0.75rem 1rem;
+      white-space: pre-line;
     }
-
+  
     .message-time {
-        font-size: 0.75rem;
-        text-align: right;
-        margin-top: 0.25rem;
-        opacity: 0.8;
+      font-size: 0.8rem;
+      margin-top: 0.25rem;
+      color: #bbb;
     }
-
-    .chat-input {
-        display: flex;
-        gap: 0.5rem;
-        margin-top: 1rem;
-    }
-
-    .chat-input input {
-        flex: 1;
-        padding: 0.75rem;
-        border-radius: 1.5rem;
-    }
-
-    .chat-input button {
-        border-radius: 1.5rem;
-    }
-
-    .loading-indicator {
-        display: none;
-        margin-right: auto;
-        background-color: var(--bs-gray-800);
-        border-radius: 1rem 1rem 1rem 0;
-        padding: 0.75rem 1rem;
-    }
-
-    .typing-indicator {
-        display: flex;
-    }
-
-    .typing-indicator span {
-        height: 0.5rem;
-        width: 0.5rem;
-        margin: 0 0.1rem;
-        background-color: var(--bs-gray-600);
-        border-radius: 50%;
-        display: inline-block;
-        animation: typing 1.4s infinite ease-in-out both;
-    }
-
-    .typing-indicator span:nth-child(1) {
-        animation-delay: 0s;
-    }
-
-    .typing-indicator span:nth-child(2) {
-        animation-delay: 0.2s;
-    }
-
-    .typing-indicator span:nth-child(3) {
-        animation-delay: 0.4s;
-    }
-
-    @keyframes typing {
-        0% {
-            transform: translateY(0px);
-        }
-        50% {
-            transform: translateY(-5px);
-        }
-        100% {
-            transform: translateY(0px);
-        }
-    }
-
+  
     .suggestion-chips {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.5rem;
-        margin-bottom: 1rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 1rem;
     }
-
+  
     .suggestion-chip {
-        background-color: var(--bs-gray-800);
-        border-radius: 1rem;
-        padding: 0.5rem 1rem;
-        font-size: 0.875rem;
+      background-color: var(--bs-gray-800);
+      border-radius: 1rem;
+      padding: 0.5rem 1rem;
+      font-size: 0.9rem;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+  
+    .suggestion-chip:hover {
+      background-color: var(--bs-gray-700);
+    }
+  
+    .chat-input {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+  
+    .chat-input input {
+      flex: 1;
+    }
+  
+    .sidebar {
+      position: fixed;
+      top: 70px;
+      left: 0;
+      bottom: 0;
+      width: 60px;
+      background-color: var(--bs-gray-900);
+      border-right: 1px solid #3a3a3a;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 1rem;
+      z-index: 1000;
+    }
+  
+    .sidebar button {
+      background: none;
+      border: none;
+      margin: 1rem 0;
+      font-size: clamp(1.2rem, 2vw, 1.5rem);
+      color: inherit;
+      cursor: pointer;
+    }
+  
+    .sidebar button:hover {
+      color: var(--bs-info);
+    }
+  
+    @media (max-width: 768px) {
+      .sidebar {
+        display: none;
+      }
+  
+      .main-content {
+        margin-left: 0;
+        margin-right: 0;
+        padding: 0.5rem;
+      }
+  
+      .chat-container {
+        max-width: 100%;
+      }
+  
+      .chat-header .hamburger {
+        display: block;
+        position: absolute;
+        top: 0.5rem;
+        left: 0.5rem;
+        font-size: 1.8rem;
+        color: var(--bs-info);
         cursor: pointer;
-        transition: background-color 0.2s;
+      }
+    }
+  
+    @media (min-width: 769px) {
+      .chat-header .hamburger {
+        display: none;
+      }
+    }
+  
+    /* ---------- Light Mode Enhancements ---------- */
+    body.light-mode {
+      background-color: #f4f1ed;
+      color: #2b2b2b;
+    }
+  
+    body.light-mode .page-container {
+      background-color: #f4f1ed;
+    }
+  
+    body.light-mode .chat-header h1 {
+      color: #2b2b2b;
+    }
+  
+    body.light-mode .chat-header p {
+      color: #555;
+    }
+  
+    body.light-mode .chat-messages {
+      background-color: #ffffff;
+      border: 1px solid #e2dcd5;
+    }
+  
+    body.light-mode .system-message {
+      background-color: #f3ebe5;
+      color: #2a2a2a;
+    }
+  
+    body.light-mode .user-message {
+      background-color: #d4eef2;
+      color: #154e53;
+    }
+  
+    body.light-mode .suggestion-chip {
+      background-color: #e6e0da;
+      color: #333;
+    }
+  
+    body.light-mode .suggestion-chip:hover {
+      background-color: #d5cdc4;
+    }
+  
+    body.light-mode .form-control {
+      background-color: #fffdf9;
+      color: #333;
+      border: 1px solid #d1c8c0;
+    }
+  
+    body.light-mode .form-control::placeholder {
+      color: #888;
+    }
+  
+    body.light-mode .btn-info {
+      background-color: #41858c;
+      border-color: #387378;
+      color: #fff;
+    }
+  
+    body.light-mode .btn-info:hover {
+      background-color: #387378;
+    }
+  
+    body.light-mode .btn-danger {
+      background-color: #a94b46;
+      border-color: #943f3b;
+      color: #fff;
+    }
+  
+    body.light-mode .btn-danger:hover {
+      background-color: #943f3b;
+    }
+    /* Light mode overrides for sidebar */
+    body.light-mode .sidebar {
+    background-color: #fdfaf7;
+    border-right: 1px solid #e0d8cf;
     }
 
-    .suggestion-chip:hover {
-        background-color: var(--bs-gray-700);
+    body.light-mode .sidebar button {
+    color: #5a5a5a;
     }
-</style>
+
+    body.light-mode .sidebar button:hover {
+    color: #41858c;
+    }
+
+    /* -------- Light Mode Enhancements for chat.js elements -------- */
+    body.light-mode .modal-content {
+    background-color: #fdfaf7;
+    color: #3b3b3b;
+    border: 1px solid #e0d8cf;
+    }
+
+    body.light-mode .modal-header,
+    body.light-mode .modal-body {
+    background-color: #f8f4ee;
+    color: #3b3b3b;
+    }
+
+    body.light-mode .modal-title {
+    color: #2d2d2d;
+    }
+
+    body.light-mode .form-control,
+    body.light-mode .form-select {
+    background-color: #fffefb;
+    color: #212529;
+    border: 1px solid #cfc6be;
+    }
+
+    body.light-mode .form-control::placeholder {
+    color: #999;
+    }
+
+    body.light-mode .btn {
+    transition: all 0.2s ease;
+    }
+
+    body.light-mode .btn-secondary {
+    background-color: #aabac6;
+    border-color: #96a2ae;
+    color: #212529;
+    }
+
+    body.light-mode .btn-secondary:hover {
+    background-color: #96a2ae;
+    border-color: #8b98a5;
+    }
+
+    body.light-mode .btn-info {
+    background-color: #41858c;
+    border-color: #387378;
+    color: #fff;
+    }
+
+    body.light-mode .btn-info:hover {
+    background-color: #387378;
+    }
+
+    body.light-mode .btn-danger {
+    background-color: #b04646;
+    border-color: #a53c3c;
+    color: #fff;
+    }
+
+    body.light-mode .btn-danger:hover {
+    background-color: #a53c3c;
+    }
+
+    body.light-mode .accordion-item {
+    background-color: #fdfaf7;
+    color: #3b3b3b;
+    border: 1px solid #e0d8cf;
+    }
+
+    body.light-mode .accordion-button {
+    background-color: #eae3db;
+    color: #3b3b3b;
+    }
+
+    body.light-mode .accordion-button.collapsed {
+    background-color: #f1ebe4;
+    }
+
+    body.light-mode .accordion-body {
+    background-color: #fffefb;
+    color: #3b3b3b;
+    border-top: 1px solid #ddd0c7;
+    }
+
+  </style>
+  
+  
 {% endblock %}
 
 {% block content %}
-<div class="chat-container">
-    <div class="chat-header">
+<div class="page-container">
+  <!-- ---------- Fixed Sidebar for Desktop ---------- -->
+  <div class="sidebar">
+    <button data-bs-toggle="modal" data-bs-target="#modalDocuments" title="Documents">
+      <i class="fas fa-file-alt"></i>
+    </button>
+    <button data-bs-toggle="modal" data-bs-target="#modalUpload" title="Upload">
+      <i class="fas fa-upload"></i>
+    </button>
+    <button data-bs-toggle="modal" data-bs-target="#modalReferenced" title="Referenced Documents">
+      <i class="fas fa-list"></i>
+    </button>
+    <button data-bs-toggle="modal" data-bs-target="#modalIncidents" title="Incidents">
+      <i class="fas fa-exclamation-triangle"></i>
+    </button>
+  </div>
+
+  <!-- ---------- Offcanvas Sidebar for Small Screens ---------- -->
+  <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasSidebar" aria-labelledby="offcanvasSidebarLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="offcanvasSidebarLabel">Navigation</h5>
+      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body text-center">
+      <button class="btn btn-link text-light" data-bs-toggle="modal" data-bs-target="#modalDocuments" title="Documents">
+        <i class="fas fa-file-alt"></i> Documents
+      </button>
+      <button class="btn btn-link text-light" data-bs-toggle="modal" data-bs-target="#modalUpload" title="Upload">
+        <i class="fas fa-upload"></i> Upload
+      </button>
+      <button class="btn btn-link text-light" data-bs-toggle="modal" data-bs-target="#modalReferenced" title="Referenced Documents">
+        <i class="fas fa-list"></i> Referenced
+      </button>
+      <button class="btn btn-link text-light" data-bs-toggle="modal" data-bs-target="#modalIncidents" title="Incidents">
+        <i class="fas fa-exclamation-triangle"></i> Incidents
+      </button>
+    </div>
+  </div>
+
+  <!-- ---------- Main Chat Content ---------- -->
+  <div class="main-content">
+    <div class="chat-container">
+      <div class="chat-header">
+        <!-- Hamburger for Offcanvas on small screens -->
+        <i class="fas fa-bars hamburger" data-bs-toggle="offcanvas" data-bs-target="#offcanvasSidebar" aria-controls="offcanvasSidebar"></i>
         <h1>Safety Information Chat</h1>
         <p>Ask about safety protocols, incidents, or emergency procedures</p>
-    </div>
+      </div>
 
-    <div class="chat-messages" id="chat-messages">
+      <div class="chat-messages" id="chat-messages">
         <div class="message system-message">
-            <div class="message-content">
-                Hello! I'm your Safety Information Assistant. I can help you with safety protocols, emergency procedures, and incident information. How can I assist you today?
-            </div>
-            <div class="message-time">Just now</div>
+          <div class="message-content">
+            Hello! I'm your Safety Information Assistant. I can help you with safety protocols, emergency procedures, and incident information. How can I assist you today?
+          </div>
+          <div class="message-time">Just now</div>
         </div>
-    </div>
+      </div>
 
-    <div class="loading-indicator" id="loading-indicator">
-        <div class="typing-indicator">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-    </div>
-
-    <div class="suggestion-chips">
+      <div class="suggestion-chips">
         <div class="suggestion-chip" data-query="What are the emergency protocols for chemical spills?">
-            Emergency protocols for chemical spills
+          Emergency protocols for chemical spills
         </div>
         <div class="suggestion-chip" data-query="How do I handle a gas leak situation?">
-            How to handle a gas leak
+          How to handle a gas leak
         </div>
         <div class="suggestion-chip" data-query="What PPE is required for corrosive materials?">
-            PPE for corrosive materials
+          PPE for corrosive materials
         </div>
         <div class="suggestion-chip" data-query="What are similar past incidents to a diesel fuel spill?">
-            Find similar incidents to a fuel spill
+          Find similar incidents to a fuel spill
         </div>
-    </div>
+      </div>
 
-    <div class="chat-input">
+      <div class="chat-input">
         <input type="text" id="chat-input" class="form-control" placeholder="Type your safety question here...">
         <button class="btn btn-info" id="send-button">
-            <i class="fas fa-paper-plane"></i>
+          <i class="fas fa-paper-plane"></i>
         </button>
         <button class="btn btn-danger" id="clear-chat-button">
-            <i class="fas fa-trash-alt"></i> Clear Chat
+          <i class="fas fa-trash-alt"></i> Clear Chat
         </button>
+      </div>
     </div>
-</div>
+  </div>
 
-<input type="hidden" id="session-id" value="{{ session_id }}">
+  <!-- ---------- Modals for Each Functionality ---------- -->
+
+  <!-- Modal: Documents -->
+  <div class="modal fade" id="modalDocuments" tabindex="-1" aria-labelledby="modalDocumentsLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalDocumentsLabel">Documents</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <label class="form-label">Select documents to search from:</label>
+          <select id="document-select" class="form-select" multiple>
+            {% for doc in available_docs %}
+            <option value="{{ doc }}">{{ doc }}</option>
+            {% endfor %}
+          </select>
+          <small class="text-muted">Hold Ctrl (Cmd on Mac) to select multiple.</small>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal: Upload -->
+  <div class="modal fade" id="modalUpload" tabindex="-1" aria-labelledby="modalUploadLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalUploadLabel">Upload File</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <label class="form-label">Upload file for chat (PDF/DOCX/TXT):</label>
+          <input type="file" id="upload-input" class="form-control mb-2">
+          <button class="btn btn-secondary w-100" id="upload-button">
+            <i class="fas fa-upload"></i> Upload
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal: Referenced Documents -->
+  <div class="modal fade" id="modalReferenced" tabindex="-1" aria-labelledby="modalReferencedLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalReferencedLabel">Referenced Documents</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div id="referenced-chunks-panel"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal: Incidents -->
+  <div class="modal fade" id="modalIncidents" tabindex="-1" aria-labelledby="modalIncidentsLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalIncidentsLabel">Similar Incidents</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div id="incident-container"></div>
+          <div class="incident-pagination" id="incident-pagination"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <input type="hidden" id="session-id" value="{{ session_id }}">
+</div>
 {% endblock %}
 
 {% block scripts %}
+
+<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 <script src="{{ url_for('static', filename='js/chat.js') }}"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const modals = ['#modalDocuments', '#modalUpload', '#modalReferenced', '#modalIncidents'];
+
+    modals.forEach(id => {
+      const modalEl = document.querySelector(id);
+      modalEl?.addEventListener('hide.bs.modal', () => {
+        if (document.activeElement && modalEl.contains(document.activeElement)) {
+          document.activeElement.blur();
+        }
+      });
+    });
+  });
+</script>
+
+
+  
 {% endblock %}

@@ -6,12 +6,12 @@
         max-width: 900px;
         margin: 0 auto;
     }
-    
+
     .assessment-header {
         padding: 2rem 0;
         margin-bottom: 2rem;
     }
-    
+
     .severity-scale {
         display: flex;
         width: 100%;
@@ -20,7 +20,7 @@
         border-radius: 0.25rem;
         overflow: hidden;
     }
-    
+
     .severity-level {
         flex: 1;
         display: flex;
@@ -31,19 +31,19 @@
         font-size: 0.8rem;
         text-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
     }
-    
+
     .severity-1 { background-color: #28a745; }
     .severity-2 { background-color: #a3c739; }
-    .severity-3 { background-color: #ffc107; }
+    .severity-3 { background-color: #ffc107; color: #000; }
     .severity-4 { background-color: #fd7e14; }
     .severity-5 { background-color: #dc3545; }
-    
+
     .severity-marker {
         position: relative;
         width: 100%;
         height: 2rem;
     }
-    
+
     .severity-arrow {
         position: absolute;
         top: -10px;
@@ -54,24 +54,75 @@
         border-right: 10px solid transparent;
         border-top: 10px solid #fff;
     }
-    
+
     .insights-card {
         white-space: pre-line;
     }
-    
+
     .historical-data {
         margin-top: 2rem;
     }
-    
+
     .chart-container {
         height: 300px;
         margin-top: 1rem;
     }
-    
+
     .form-group {
         margin-bottom: 1rem;
     }
+
+    /* ---------- Light Mode Styling ---------- */
+    body.light-mode {
+        background-color: #f4f1ed;
+        color: #3b3b3b;
+    }
+
+    body.light-mode .card {
+        background-color: #fdfaf7;
+        border: 1px solid #e0d8cf;
+        color: #3b3b3b;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+    }
+
+    body.light-mode .card-header {
+        background-color: #f1ebe4;
+        border-bottom: 1px solid #e0d8cf;
+        color: #2d2d2d;
+    }
+
+    body.light-mode .form-control,
+    body.light-mode .form-select {
+        background-color: #fffefb;
+        color: #3b3b3b;
+        border: 1px solid #cfc6be;
+    }
+
+    body.light-mode .form-control::placeholder {
+        color: #888;
+    }
+
+    body.light-mode .btn-info {
+        background-color: #41858c;
+        border-color: #387378;
+        color: #fff;
+    }
+
+    body.light-mode .btn-info:hover {
+        background-color: #387378;
+    }
+
+    body.light-mode .bg-dark {
+        background-color: #fdfaf7 !important;
+        color: #3b3b3b !important;
+        border: 1px solid #ddd0c7;
+    }
+
+    body.light-mode .border {
+        border-color: #d6ccc2 !important;
+    }
 </style>
+
 {% endblock %}
 
 {% block content %}

@@ -3,136 +3,270 @@
 {% block head %}
 <style>
     .search-container {
-        max-width: 800px;
-        margin: 0 auto;
+      max-width: 900px;
+      margin: 0 auto;
     }
-    
+  
     .search-header {
-        padding: 2rem 0;
-        margin-bottom: 2rem;
+      padding: 2rem 0;
+      margin-bottom: 2rem;
     }
-    
-    .result-card {
-        margin-bottom: 1rem;
-        transition: transform 0.2s;
+  
+    .toggle-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 1rem;
     }
-    
-    .result-card:hover {
-        transform: translateY(-5px);
+  
+    .filter-label {
+      font-weight: 600;
+      font-size: 0.9rem;
     }
-    
-    .source-badge {
-        font-size: 0.8rem;
+  
+    .result-section-title {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
     }
-    
-    .loading-spinner {
-        display: none;
+  
+    .result-chart {
+      margin-top: 2rem;
+      text-align: center;
     }
-    
-    .query-examples {
-        margin-top: 2rem;
+  
+    .chart-container img {
+      max-width: 900px;
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      margin-top: 1rem;
     }
-    
-    .example-query {
-        cursor: pointer;
-        transition: background-color 0.2s;
+  
+    .filter-section {
+      background-color: var(--bs-gray-900);
+      padding: 1.25rem;
+      border-radius: 0.75rem;
+      margin-bottom: 1.5rem;
+      border: 1px solid #3a3a3a;
     }
-    
-    .example-query:hover {
-        background-color: var(--bs-gray-800);
+  
+    /* ---------------- Light Mode (Warm Theme) ---------------- */
+    body.light-mode {
+      background-color: #f4f1ed;
+      color: #2f2f2f;
     }
-    
-    #search-results {
-        padding-top: 1rem;
+  
+    body.light-mode .search-header h1,
+    body.light-mode .search-header p,
+    body.light-mode .filter-label,
+    body.light-mode .result-section-title,
+    body.light-mode .form-check-label {
+      color: #2f2f2f;
     }
-    
-    .protocols-list {
-        list-style-type: none;
-        padding-left: 0;
+  
+    body.light-mode .filter-section {
+      background-color: #fcf9f6;
+      border: 1px solid #e2ddd6;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
     }
-    
-    .protocols-list li {
-        padding: 0.5rem 0;
-        border-bottom: 1px solid var(--bs-gray-700);
+  
+    body.light-mode .form-control,
+    body.light-mode .form-select {
+      background-color: #fffdfa;
+      color: #2f2f2f;
+      border: 1px solid #d2c8c1;
     }
-    
-    .protocols-list li:last-child {
-        border-bottom: none;
+  
+    body.light-mode .form-control::placeholder {
+      color: #8b8b8b;
     }
-</style>
+  
+    body.light-mode .btn-primary {
+      background-color: #6750a4;
+      border-color: #5e4897;
+      color: #fff;
+    }
+  
+    body.light-mode .btn-primary:hover {
+      background-color: #5e4897;
+      border-color: #4f3d86;
+    }
+  
+    body.light-mode .btn-info {
+      background-color: #41858c;
+      border-color: #387378;
+      color: #fff;
+    }
+  
+    body.light-mode .btn-info:hover {
+      background-color: #387378;
+      border-color: #30656b;
+    }
+  
+    body.light-mode .alert.alert-secondary {
+      background-color: #f3f0eb;
+      color: #3b3b3b;
+      border-color: #d6ccc2;
+    }
+  
+    body.light-mode .card.bg-dark.text-light {
+      background-color: #fcf9f6 !important;
+      color: #2f2f2f !important;
+      border: 1px solid #e2ddd6;
+    }
+  
+    body.light-mode .card.bg-dark.text-light .card-header {
+      background-color: #f1ebe4;
+      color: #2f2f2f;
+    }
+  
+    body.light-mode .result-chart {
+      background-color: #fcf9f6;
+      border-radius: 0.5rem;
+      padding: 1rem;
+    }
+  
+    body.light-mode .chart-container img {
+      border: 1px solid #e3dad0;
+    }
+
+        /* ------- Light Mode Card Styling for Dynamic Results ------- */
+    body.light-mode .card.dynamic-result {
+    background-color: #fdfaf7;
+    border: 1px solid #d6ccc2;
+    color: #3b3b3b;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+    }
+
+    body.light-mode .card.dynamic-result .card-header {
+    background-color: #f1ebe4;
+    border-bottom: 1px solid #e5dad2;
+    color: #2f2f2f;
+    }
+
+    body.light-mode .card.dynamic-result .card-body p {
+    margin-bottom: 0.6rem;
+    font-size: 0.95rem;
+    color: #3b3b3b;
+    }
+
+    body.light-mode .card.dynamic-result strong {
+    color: #2a2a2a;
+    }
+
+  </style>
+  
+
 {% endblock %}
 
 {% block content %}
 <div class="search-container">
     <div class="search-header text-center">
-        <h1>NLP Safety Information Search</h1>
-        <p class="lead">Ask questions in natural language to retrieve safety protocols, incident reports, and guidance</p>
+        <h1>Pipeline Incident Search & Analysis</h1>
+        <p class="lead">Filter incidents, search summaries, and visualize patterns</p>
     </div>
-    
-    <div class="card">
-        <div class="card-body">
-            <div class="input-group mb-3">
-                <input type="text" id="search-input" class="form-control" placeholder="Ask a safety question..." aria-label="Safety search query">
-                <button class="btn btn-info" type="button" id="search-button">
-                    <i class="fas fa-search me-1"></i> Search
-                </button>
-            </div>
-            <div class="text-center loading-spinner" id="loading-spinner">
-                <div class="spinner-border text-info" role="status">
-                    <span class="visually-hidden">Loading...</span>
-                </div>
-                <p class="mt-2">Searching safety information...</p>
-            </div>
+
+    <div class="toggle-wrapper">
+        <h5>Search Mode</h5>
+        <div class="form-check form-switch">
+            <input class="form-check-input" type="checkbox" id="toggle-advanced-search">
+            <label class="form-check-label" for="toggle-advanced-search">Enable Advanced Filters</label>
         </div>
     </div>
-    
-    <!-- Query Examples -->
-    <div class="query-examples">
-        <h5>Example queries:</h5>
-        <div class="row g-2">
-            <div class="col-md-6">
-                <div class="card example-query" data-query="What are the emergency protocols for a chemical spill?">
-                    <div class="card-body py-2">
-                        <small>"What are the emergency protocols for a chemical spill?"</small>
-                    </div>
-                </div>
+
+    <!-- 🔍 NLP Search Bar -->
+    <div class="filter-section" id="nlp-search-bar">
+        <input type="text" id="nlp-query" class="form-control" placeholder="e.g. Gas leaks in Texas after 2021 with injuries">
+        <button class="btn btn-primary mt-2" id="submit-nlp-search">
+            <i class="fas fa-brain me-1"></i> Search with AI
+        </button>
+    </div>
+
+    <!-- 🔍 Advanced Filter Section -->
+    <div class="filter-section" id="filter-panel">
+        <div class="row g-3">
+            <div class="col-md-4">
+                <label class="filter-label">Material Released</label>
+                <input type="text" id="filter-material" class="form-control" placeholder="e.g., Natural Gas">
             </div>
-            <div class="col-md-6">
-                <div class="card example-query" data-query="How should I respond to a natural gas leak in the facility?">
-                    <div class="card-body py-2">
-                        <small>"How should I respond to a natural gas leak in the facility?"</small>
-                    </div>
-                </div>
+            <div class="col-md-4">
+                <label class="filter-label">Location Contains</label>
+                <input type="text" id="filter-location" class="form-control" placeholder="e.g., Texas">
             </div>
-            <div class="col-md-6">
-                <div class="card example-query" data-query="What past incidents involved corrosive materials and how were they handled?">
-                    <div class="card-body py-2">
-                        <small>"What past incidents involved corrosive materials and how were they handled?"</small>
-                    </div>
-                </div>
+            <div class="col-md-4">
+                <label class="filter-label">Severity</label>
+                <select id="filter-severity" class="form-select">
+                    <option value="">Any</option>
+                    <option value="Critical">Critical</option>
+                    <option value="High">High</option>
+                    <option value="Moderate">Moderate</option>
+                    <option value="Low">Low</option>
+                    <option value="Minor">Minor</option>
+                </select>
             </div>
-            <div class="col-md-6">
-                <div class="card example-query" data-query="What are the required PPE for handling hydrochloric acid?">
-                    <div class="card-body py-2">
-                        <small>"What are the required PPE for handling hydrochloric acid?"</small>
-                    </div>
-                </div>
+            <div class="col-md-3">
+                <label class="filter-label">From Year</label>
+                <input type="number" id="filter-from-year" class="form-control" placeholder="e.g., 2020">
+            </div>
+            <div class="col-md-3">
+                <label class="filter-label">To Year</label>
+                <input type="number" id="filter-to-year" class="form-control" placeholder="e.g., 2024">
+            </div>
+            <div class="col-md-3">
+                <label class="filter-label">Injuries?</label>
+                <select id="filter-injuries" class="form-select">
+                    <option value="">Any</option>
+                    <option value="yes">With Injuries</option>
+                    <option value="no">No Injuries</option>
+                </select>
             </div>
         </div>
+        <div class="text-end mt-3">
+            <button class="btn btn-info" id="apply-filters">
+                <i class="fas fa-filter me-1"></i> Apply Filters & Search
+            </button>
+        </div>
     </div>
-    
-    <!-- Search Results -->
+
+    <!-- 🔎 Search Results -->
     <div id="search-results" class="mt-4" style="display: none;">
-        <h4 class="mb-3">Search Results</h4>
-        <div class="card mb-4">
+        <!-- 📋 Parsed Filter Summary -->
+        <div id="parsed-filter-summary" class="alert alert-secondary small" style="display: none;"></div>
+
+        <!-- 💡 AI Summary Section -->
+        <div id="ai-insight" class="card bg-dark text-light mb-4" style="display: none;">
+            <div class="card-header">
+                <strong>AI Summary</strong>
+            </div>
             <div class="card-body">
-                <h5 class="card-title">AI-Generated Answer</h5>
-                <div id="ai-answer" class="border-top pt-3 mt-2"></div>
+                <p id="ai-answer-text" class="card-text">Loading summary...</p>
             </div>
         </div>
-        
-        <h5>Source Documents</h5>
-        <div id="result-documents"></div>
+
+        <!-- 📌 Results -->
+        <div class="result-section-title">🛠️ Incident Results</div>
+        <div id="result-documents" class="mb-4"></div>
+
+        <!-- 📊 Chart Type Dropdown -->
+        <div class="row mb-3">
+            <div class="col-md-4">
+                <label for="chart-type-select" class="filter-label">Select Chart Type</label>
+                <select id="chart-type-select" class="form-select">
+                    <option value="bar">Top Materials (Bar)</option>
+                    <option value="severity">Incidents by Severity</option>
+                    <option value="line">Incidents Over Time (Line)</option>
+                    <option value="location">Top Locations</option>
+                </select>
+            </div>
+        </div>
+
+        <!-- 📊 Chart Results -->
+        <div class="result-chart row">
+            <div class="col-md-12">
+                <div class="chart-container" id="chart-container"></div>
+            </div>
+        </div>
     </div>
 </div>
 {% endblock %}
