@@ -193,7 +193,7 @@ document.addEventListener("DOMContentLoaded", function () {
                         data-bs-target="#chunk-collapse-${index}" 
                         aria-expanded="false" 
                         aria-controls="chunk-collapse-${index}">
-                  Chunk ${index + 1}: ${chunk.chunk_id || ""}
+                  Reference ${index + 1}: Doc : ${chunk.doc || ""}, Page : ${chunk.page || ""}
                 </button>
               </h2>
               <div id="chunk-collapse-${index}" class="accordion-collapse collapse" 
